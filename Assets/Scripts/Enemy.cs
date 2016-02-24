@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ThirdPersonShooter : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,4 +12,10 @@ public class ThirdPersonShooter : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+        Destroy(gameObject);
+    }
 }
