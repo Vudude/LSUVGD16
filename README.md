@@ -31,9 +31,7 @@ git push
 to push the changes to the actual web repo for everyone else.
 Then you can go on the git project and make a pull request if your change is basically final. Don't merge the pull request yourself let someone else look it over.
 
-
-
-Rebasing or how to update your branch to what's on the master.
+# Rebasing or how to update your branch to what's on the master.
 
 git checkout master
 
