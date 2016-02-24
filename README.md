@@ -16,11 +16,37 @@ Once in the branch, you can work on the project.
 
 After making changes, use
 
+git add .
+
+to add your changed files to what you're going to commit
+
+and
+
 git commit
 
-to commit the changes to your LOCAL repo and then
+to actually commit the changes to your LOCAL repo and then
 
 git push
 
 to push the changes to the actual web repo for everyone else.
 Then you can go on the git project and make a pull request if your change is basically final. Don't merge the pull request yourself let someone else look it over.
+
+
+
+Rebasing or how to update your branch to what's on the master.
+
+git checkout master
+
+to change to what your LOCAL master is.
+
+git fetch --prune origin 
+
+in order to download the newest updates to master and
+
+git reset --hard origin/master
+
+in order to reset your local master to the updated master. Then, go to your branch with git checkout "your-branch" and use
+
+git rebase -i master 
+
+in order to rebase your branch on top of master.
