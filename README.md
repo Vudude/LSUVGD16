@@ -48,3 +48,11 @@ in order to reset your local master to the updated master. Then, go to your bran
 git rebase -i master 
 
 in order to rebase your branch on top of master.
+
+# Windows Shell
+
+cd - change directory 
+
+cd .. - directory above current
+
+ls - lists all files in current directory
