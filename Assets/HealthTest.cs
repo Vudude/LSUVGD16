@@ -29,6 +29,10 @@ public class HealthTest : MonoBehaviour {
 	//boolean that is true when merby takes damage
 	//public bool takeDamage = false;
 
+	//boolean that is true when merby takes damage and becomes invincible
+	public bool hasInvincibility = false;
+
+	public float invincibleTimer = 2;
 
 	//box for health
 	Rect healthLabel = new Rect(60,60,60,60);
@@ -41,16 +45,23 @@ public class HealthTest : MonoBehaviour {
 	//displays updated version of current health
 	public void takeDamage(int damage)
 	{
-		if (currentHealth == 0)
-			gameObject.SetActive (false);
-		else if (damage > currentHealth) 
+		if (hasInvincibility == false) 
 		{
-			currentHealth = 0;
-			hasAbility = false;
+			hasInvincibility = true;
+			invincibleTimer = 2;
+			if (currentHealth == 0)
+				gameObject.SetActive (false);
+			else if (damage > currentHealth) 
+			{
+				currentHealth = 0;
+				hasAbility = false;
+			} 
+
+			else
+				currentHealth = currentHealth - damage;
 		}
 
-			else 
-				currentHealth = currentHealth - damage;
+
 	}
 
 	//creates the display for merby's health
@@ -68,13 +79,21 @@ public class HealthTest : MonoBehaviour {
 		OnGUI ();
 	}
 
+	void Update()
+	{
+		if (invincibleTimer > 0)
+			invincibleTimer = invincibleTimer - Time.deltaTime;
+		else
+			hasInvincibility = false;
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end
 		if (other.gameObject.CompareTag ("ability")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 			currentHealth = abilityHealth;
 			hasAbility = true;
 		}
@@ -82,25 +101,25 @@ public class HealthTest : MonoBehaviour {
 		//calls take damage for each type of bullet collided with
 		if (other.gameObject.CompareTag ("pistolBullet")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 			takeDamage (20);
 		}
 
 		else if (other.gameObject.CompareTag ("sniperBullet")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 			takeDamage (50);
 		}
 
 		else if (other.gameObject.CompareTag ("smgBullet")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 			takeDamage (25);
 		}
 
 		else if (other.gameObject.CompareTag ("bazookaBullet")) 
 		{
-			other.gameObject.SetActive (false);
+			Destroy(other.gameObject);
 			takeDamage (100);
 		}
 		OnGUI ();
