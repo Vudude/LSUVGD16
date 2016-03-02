@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Materials.meta
+guid: 73ae6e39d26786d4faeb35135cc83b68
+folderAsset: yes
+timeCreated: 1456290727
+=======
 guid: 0ff9e0b91cf5ed141b8806964a1e76a6
 folderAsset: yes
 timeCreated: 1456358788
+>>>>>>> master:Assets/Materials.meta
 licenseType: Free
 DefaultImporter:
   userData: 
