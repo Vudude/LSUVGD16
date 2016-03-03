@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD:Assets/Scripts/Enemy.cs
 	
 	}
 
@@ -23,12 +22,5 @@ public class Enemy : MonoBehaviour {
         Destroy(other.gameObject);
         Destroy(gameObject);
     }
-=======
 
-
-       mouse.LookRotation (transform, transform);
-
-    }
-
->>>>>>> master:Assets/Scripts/ThirdPersonShooter.cs
 }
