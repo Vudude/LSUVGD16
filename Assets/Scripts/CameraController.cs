@@ -21,9 +21,13 @@ public class CameraController : MonoBehaviour {
 
     private void LateUpdate()
     {
-        
+        float xRotation = (Input.GetAxis("Mouse X"));
+        float yRotation = (Input.GetAxis("Mouse Y"));
+
         transform.position = player.transform.position - player.transform.forward * distance + heightVector;
-        transform.rotation = player.transform.rotation * Quaternion.Euler(10f, 0f, 0f);
+        transform.localRotation *= Quaternion.Euler(xRotation, yRotation, 0f);
+
+        
     }
     
 }

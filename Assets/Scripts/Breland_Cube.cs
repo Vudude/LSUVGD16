@@ -34,14 +34,17 @@ public class Breland_Cube : MonoBehaviour {
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            //transform.Translate(Vector3.left * strafeSpeed * Time.deltaTime);
-            transform.Rotate(-Vector3.up * 10f * Time.deltaTime);
+            transform.Translate(Vector3.left * strafeSpeed * Time.deltaTime);
+            //transform.Rotate(-Vector3.up * 10f * Time.deltaTime);
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            //transform.Translate(Vector3.right * strafeSpeed * Time.deltaTime);
-            transform.Rotate(Vector3.up * 10f * Time.deltaTime);
+            transform.Translate(Vector3.right * strafeSpeed * Time.deltaTime);
+            //transform.Rotate(Vector3.up * 10f * Time.deltaTime);
 
         playerRay = new Ray(transform.position, transform.forward * 100f);
         Debug.DrawRay(transform.position, transform.forward * 100f);
+
+
+        transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
     }
 
     void OnGUI()
