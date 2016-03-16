@@ -13,8 +13,8 @@ public class SpitOut: MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-        if (Input.GetButtonDown("Fire2"))
+
+        if (Input.GetMouseButtonDown(1))
         {
             Rigidbody clone;
             clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
