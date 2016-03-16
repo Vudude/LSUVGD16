@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TestProjectile : MonoBehaviour {
 
-    private GameObject prefab;
+    public GameObject prefab;
     private Ray ray;
     private Vector3 lookPos;
     private RaycastHit hit;
@@ -13,7 +13,6 @@ public class TestProjectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        prefab = Resources.Load("TestProjectile") as GameObject;
 	}
 	
 	// Update is called once per frame

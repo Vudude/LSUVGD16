@@ -9,7 +9,7 @@ public class MerbyController : MonoBehaviour {
     public float strafeSpeed = 3f;
 
     public float lookSens = 100f;
-    public float jumpSpeed = 1;
+    public float jumpSpeed = 5;
 
 
     void Start ()

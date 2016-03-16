@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour {
 
 	//the current health of the enemy
-	public int currentHealth;
+	public int currentHealth = 100;
+
+    private bool beingEaten = false;
 
 	// initializes the starting enemy health to be a 100
 	void Start () 
 	{
-		currentHealth = 100;
 	}
 
 	//function that calculates an enemies' new health. Takes an integer that represents merby's damage
@@ -18,9 +19,18 @@ public class EnemyHealth : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		
+        Debug.Log("collision");
+		if (other.gameObject.CompareTag ("Player") && beingEaten)
+        {
+            Destroy(gameObject);
+            //other.SendMessage(Grant Weapon Method);
+        } 
+
 		//calls take damage for each type of bullet collided with
-		if (other.gameObject.CompareTag ("merbyPistolBullet")) 
+
+		else if (other.gameObject.CompareTag ("merbyPistolBullet")) 
 		{
+            Debug.Log("Pistol Hit");
 			Destroy(other.gameObject);
 			takeDamage (33);
 		}
@@ -58,4 +68,10 @@ public class EnemyHealth : MonoBehaviour {
 			gameObject.SetActive (false);
 	}
 
+    public void getEaten()
+    {
+        gameObject.GetComponent<Collider>().isTrigger = true;
+        gameObject.GetComponent<Rigidbody>().useGravity = false;
+        beingEaten = true;
+    }
 }
