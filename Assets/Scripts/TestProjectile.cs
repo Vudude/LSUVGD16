@@ -3,20 +3,21 @@ using System.Collections;
 
 public class TestProjectile : MonoBehaviour {
 
-    private GameObject prefab;
+    public GameObject prefab;
     private Ray ray;
     private Vector3 lookPos;
     private RaycastHit hit;
     public float aimError = .00001f;
     public float defaultAimDistance = 1000f;
+    public float projectileSpeed = 9999;
 
 	// Use this for initialization
 	void Start () {
-        prefab = Resources.Load("TestProjectile") as GameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+            Debug.DrawRay(transform.position, transform.forward);
         if (Input.GetMouseButtonDown(0))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,6 +29,7 @@ public class TestProjectile : MonoBehaviour {
                 lookPos.z = defaultAimDistance;
                 lookPos = Camera.main.ScreenToWorldPoint(lookPos);
             }
+
             GameObject projectile = Instantiate(prefab, transform.position + transform.forward, Quaternion.identity) as GameObject;
             projectile.transform.LookAt(lookPos);
             
@@ -35,7 +37,7 @@ public class TestProjectile : MonoBehaviour {
                                                             projectile.transform.eulerAngles.y + Random.Range(-aimError, aimError),
                                                             projectile.transform.eulerAngles.z);
 
-            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 9999);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed);
             Destroy(projectile, 3.0f);
         }
 	}
