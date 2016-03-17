@@ -18,7 +18,7 @@ public class TestProjectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
             Debug.DrawRay(transform.position, transform.forward);
-        if (Input.GetMouseButtonDown(0))
+		if (Input.GetButtonDown("Fire1"))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
@@ -38,7 +38,7 @@ public class TestProjectile : MonoBehaviour {
                                                             projectile.transform.eulerAngles.z);
 
             projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed);
-            Destroy(projectile, 3.0f);
+            //Destroy(projectile, 3.0f);
         }
 	}
 }

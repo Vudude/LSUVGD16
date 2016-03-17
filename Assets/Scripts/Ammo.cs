@@ -7,7 +7,7 @@ public class Ammo : MonoBehaviour
 
 	int ammoCount = 0;
 	Rect ammoLabel = new Rect(60,80,80,80);
-	public GameObject projectile;
+	public Rigidbody projectile;
 	public GameObject gun;
 
 	// Use this for initialization
@@ -29,6 +29,10 @@ public class Ammo : MonoBehaviour
 		if (Input.GetButtonDown("Fire1") && ammoCount > 0)
 		{
 			ammoCount = ammoCount - 1;
+			//Rigidbody clone;
+			//clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
+			//clone.velocity = transform.TransformDirection(Vector3.forward * 10);
+
 			Rigidbody clone;
 			clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
 			clone.velocity = transform.TransformDirection(Vector3.forward * 10);
