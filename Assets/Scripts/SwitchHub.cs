@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class SwitchHub : MonoBehaviour {
 
-    public void OnTrigger(Collider co)
+    public void OnTriggerEnter(Collider co)
     {
         if (co.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("hub1.0");
+			Debug.Log ("Hub collider");
+            SceneManager.LoadScene("Scenes/hub1.0");
         }
     }
 }

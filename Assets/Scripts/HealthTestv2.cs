@@ -89,14 +89,14 @@ public class HealthTestv2 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other)
-	{	Debug.Log ("collision happened");
+	{	//Debug.Log ("collision happened");
 
 
 		if (other.gameObject.CompareTag ("pistolBullet")) 
 		{
 			Destroy(other.gameObject);
 			takeDamage (20);
-			Debug.Log ("collision happened inside");
+			//Debug.Log ("collision happened inside");
 		}
 
 
@@ -118,7 +118,7 @@ public class HealthTestv2 : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 			takeDamage (20);
-			Debug.Log ("collision happened inside");
+			//Debug.Log ("collision happened inside");
 		}
 
 		else if (other.gameObject.CompareTag ("sniperBullet")) 

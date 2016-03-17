@@ -28,7 +28,7 @@ public class Ammo : MonoBehaviour
 		{
 			ammoCount = ammoCount - 1;
 			Rigidbody clone;
-			Debug.Log ("SHOOT");
+			//Debug.Log ("SHOOT");
 			clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
 			clone.velocity = transform.TransformDirection(Vector3.forward * 10);
 		}

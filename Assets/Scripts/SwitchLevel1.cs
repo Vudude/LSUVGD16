@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class SwitchLevel1 : MonoBehaviour {
 
-    public void OnTrigger(Collider co)
+    public void OnTriggerEnter(Collider co)
     {
         if (co.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("level1.0");
+            SceneManager.LoadScene("Scenes/Level1.0");
         }
     }
 }

@@ -3,10 +3,10 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Eat : MonoBehaviour {
-
+	public float speed = 10;
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class Eat : MonoBehaviour {
             if (Physics.Raycast(transform.position, forward, out hit))
             {
                 //later change this into lerp
-                hit.transform.gameObject.GetComponent<Rigidbody>().velocity = transform.TransformDirection(backward * 10) ;
+				hit.transform.gameObject.GetComponent<Rigidbody>().position = Vector3.MoveTowards(hit.transform.gameObject.GetComponent<Rigidbody>().position, transform.position, speed * Time.deltaTime);
 
                 //also need to disable AI
 
