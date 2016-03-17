@@ -24,19 +24,13 @@ public class Ammo : MonoBehaviour
 		{
 			gun.gameObject.SetActive (false);
 		}
-
-
-		if (Input.GetButtonDown("Fire1") && ammoCount > 0)
+		else if (Input.GetButtonDown("Fire1") && ammoCount > 0)
 		{
 			ammoCount = ammoCount - 1;
-			//Rigidbody clone;
-			//clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
-			//clone.velocity = transform.TransformDirection(Vector3.forward * 10);
-
 			Rigidbody clone;
+			Debug.Log ("SHOOT");
 			clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
 			clone.velocity = transform.TransformDirection(Vector3.forward * 10);
-			//ammoCount = ammoCount - 1;
 		}
 		GUI.Label (ammoLabel, "Ammo: " + ammoCount, "color");
 
