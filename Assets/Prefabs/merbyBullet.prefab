@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2343904}
   - 54: {fileID: 5420160}
   m_Layer: 0
-  m_Name: pistolBullet
+  m_Name: merbyBullet
   m_TagString: merbyPistolBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,7 +27,7 @@ public class SpitOutEnemy : MonoBehaviour
 		else 
 		{
 			Rigidbody clone;
-			clone = Instantiate (projectile, new Vector3 (transform.position.x + 0.95f, (transform.position.y + 0.5f), transform.position.z), transform.rotation) as Rigidbody;
+			clone = Instantiate (projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
 			clone.velocity = transform.TransformDirection (Vector3.forward * 10);
 			shootTimer = 2;
 		}
