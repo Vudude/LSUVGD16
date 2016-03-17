@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthTestv2 : MonoBehaviour {
 
@@ -44,8 +45,13 @@ public class HealthTestv2 : MonoBehaviour {
 		{
 			hasInvincibility = true;
 			invincibleTimer = 2;
-			if (currentHealth == 0)
+
+			if (currentHealth == 0) 
+			{
 				gameObject.SetActive (false);
+				SceneManager.LoadScene ("tutorial2");
+
+			}
 			else if (damage > currentHealth) 
 			{
 				currentHealth = 0;
@@ -83,7 +89,17 @@ public class HealthTestv2 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other)
-	{
+	{	Debug.Log ("collision happened");
+
+
+		if (other.gameObject.CompareTag ("pistolBullet")) 
+		{
+			Destroy(other.gameObject);
+			takeDamage (20);
+			Debug.Log ("collision happened inside");
+		}
+
+
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end
 		//FIXME change according to multiple abilities
@@ -96,11 +112,13 @@ public class HealthTestv2 : MonoBehaviour {
 			hasAbility = true;
 		}
 
+	
 		//calls take damage for each type of bullet collided with
 		if (other.gameObject.CompareTag ("pistolBullet")) 
 		{
 			Destroy(other.gameObject);
 			takeDamage (20);
+			Debug.Log ("collision happened inside");
 		}
 
 		else if (other.gameObject.CompareTag ("sniperBullet")) 
