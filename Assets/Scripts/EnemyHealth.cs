@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour {
 			takeDamage (100);
 		}
 
-		else if (other.gameObject.CompareTag ("merbySmgBullet")) 
+		else if (other.gameObject.CompareTag ("merbySMGBullet")) 
 		{
 			Destroy(other.gameObject);
 			takeDamage (34);
