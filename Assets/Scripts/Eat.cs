@@ -12,7 +12,7 @@ public class Eat : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.E))
+		if (Input.GetKey(KeyCode.E) && GetComponent<HealthTestv2>().hasAbility == false)
         {
             RaycastHit hit;
             Vector3 forward = transform.TransformDirection(Vector3.forward);
