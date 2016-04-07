@@ -6,7 +6,8 @@ public class CameraOrbit : MonoBehaviour
 {
 
     public Transform target;
-    public float distance = 5.0f;
+    public float manualDistance = 5.0f;
+    private float autoDistance = 5.0f;
     public float xSpeed = 120.0f;
     public float ySpeed = 120.0f;
 
@@ -41,25 +42,32 @@ public class CameraOrbit : MonoBehaviour
     {
         if (target)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+            x += Input.GetAxis("Mouse X") * xSpeed * manualDistance * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+            manualDistance = Mathf.Clamp(manualDistance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
             RaycastHit hit;
             if (Physics.Linecast(target.position, transform.position, out hit))
             {
-                distance -= hit.distance;
+                //autoDistance -= hit.distance;
+                autoDistance = Mathf.Lerp(autoDistance, hit.distance, 1.0f * Time.deltaTime);
             }
-            Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
-            Vector3 position = rotation * negDistance + new Vector3(target.position.x, target.position.y + 2, target.position.z);
+            else
+            {
+                autoDistance = Mathf.Lerp(autoDistance, manualDistance, 0.8f * Time.deltaTime);
+            }
+
+            transform.position = rotation * new Vector3(0.0f, 0.0f, -autoDistance) + new Vector3(target.position.x, target.position.y + 2, target.position.z);
+            //Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+            //Vector3 position = rotation * negDistance + new Vector3(target.position.x, target.position.y + 2, target.position.z);
 
             transform.rotation = rotation;
-            transform.position = position;
+            //transform.position = position;
         }
     }
 
