@@ -164,6 +164,10 @@ Prefab:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5422408, guid: 7736a8bd954142d49aea78108e145c89, type: 2}
+      propertyPath: m_Drag
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7736a8bd954142d49aea78108e145c89, type: 2}
   m_IsPrefabParent: 0
@@ -187,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityHealth: 100
-  initialHealth: 0
+  initialHealth: 1000
   currentHealth: 0
   damageColour: {r: 1, g: 0, b: 0, a: 0.1}
   hasAbility: 0
@@ -491,14 +495,14 @@ Prefab:
     - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 483014837}
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
       value: pistolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Enabled
@@ -507,6 +511,10 @@ Prefab:
     - target: {fileID: 431456, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11423774, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -526,25 +534,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 1473610085}
-  character: {fileID: 1473610083}
   player: {fileID: 483014837}
   fov: 90
   shootDistance: 10
-  projectile: {fileID: 108314, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
+  RotationSpeed: 5
+  moveSpeed: 2
+  berserkSpeed: 5
+  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
   projectileSpeed: 500
   gunTimer: 2
---- !u!114 &1473610083 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11480858, guid: 2f5870196dd31f6449338dd77b7bb582,
-    type: 2}
-  m_PrefabInternal: {fileID: 1457492404}
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
---- !u!195 &1473610085 stripped
-NavMeshAgent:
-  m_PrefabParentObject: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582,
-    type: 2}
-  m_PrefabInternal: {fileID: 1457492404}
+  ammo: 10
 --- !u!1 &2101512127
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,8 +559,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2101512128
 Transform:
@@ -574,7 +573,7 @@ Transform:
   m_LocalScale: {x: 1.17, y: 3.19, z: 2.99}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!23 &2101512129
 MeshRenderer:
   m_ObjectHideFlags: 0

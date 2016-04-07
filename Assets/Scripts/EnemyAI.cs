@@ -5,92 +5,118 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (NavMeshAgent))]
     [RequireComponent(typeof (ThirdPersonCharacter))]
 
-public class EnemyAI : MonoBehaviour 
-{
+    public class EnemyAI : MonoBehaviour 
+    {
 
-	public NavMeshAgent agent;
-	public ThirdPersonCharacter character;
-	public Transform player;
-	public double fov = 90;
-	public double shootDistance = 10;
+	    private NavMeshAgent agent;
+	    private ThirdPersonCharacter character;
+	    public Transform player;
+	    public float fov = 90;
+	    public float shootDistance = 10;
+        public float RotationSpeed = 5;
+        public float moveSpeed = 2;
+        public float berserkSpeed = 5;
+	    private Transform lastSeen;
+	    private float shootTimer;
+        private Quaternion _lookRotation;
+        private Vector3 _direction;
+        private bool is_Berserk = false;
+        private bool is_Eaten = false;
 
-	private bool is_Shooting = false;
-	private bool is_Moving = false;
+        //for animation purposes (not yet used)
+	    private bool is_Shooting = false;
+	    private bool is_Moving = false;
 
-	private Transform lastSeen;
-	private float shootTimer;
+	    //temporary setters for variables (to be initialized depending on weapon)
+	    public Rigidbody projectile;
+	    public float projectileSpeed;
+	    public float gunTimer;
+        public int ammo = 10;
 
-	//temporary setters for variables
-	public GameObject projectile;
-	public float projectileSpeed;
-	public float gunTimer;
+	    // Use this for initialization
+	    void Start () 
+	    {
+		    agent = GetComponentInChildren<NavMeshAgent>();
+		    character = GetComponent<ThirdPersonCharacter>();
 
-	// Use this for initialization
-	void Start () 
-	{
-		agent = GetComponentInChildren<NavMeshAgent>();
-		character = GetComponent<ThirdPersonCharacter>();
-
-		agent.updateRotation = false;
-		agent.updatePosition = false; 
+		    agent.updateRotation = true;
+		    agent.updatePosition = true;
+            agent.speed = moveSpeed;
 		
-		lastSeen = transform;
+		    lastSeen = transform;
 
-		//initial setup for timer
-		shootTimer = gunTimer;
+		    //initial setup for timer (to be initialized depending on weapon)
+		    shootTimer = gunTimer;
 
-	}
-
+	    }
 
         private void Update()
         {
-		agent.SetDestination(lastSeen.position);
+            shootTimer -= Time.deltaTime;
 
-		shootTimer -= Time.deltaTime;
+            if (LineOfSight(player))
+            {
+                lastSeen = player;
+                agent.SetDestination(lastSeen.position);
 
-		if (LineOfSight(player)) {
-			lastSeen = player;
+                if (agent.remainingDistance <= shootDistance)
+                {
+                    if (is_Berserk)
+                    {
+                        agent.stoppingDistance = 0;
+                        agent.speed = berserkSpeed;
 
-			if (agent.remainingDistance <= shootDistance) {
-				//shooting behavior
-				while (shootTimer <= 0) {
-					shootTarget(lastSeen);	
-				}
-			}
-			else {
-				//move close enough to shoot
-			}
-			
-		}
-		else {
-			//move to last seen
-		}
+                        //some kind of attacking function
+                        //gameObject.GetComponent<Collider>().isTrigger = true;
+                    }
+                    else {
+                        agent.stoppingDistance = shootDistance;
 
+                        //rotate to player if in range
+                        _direction = (lastSeen.position - transform.position).normalized;
+                        _lookRotation = Quaternion.LookRotation(_direction);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
 
-
+                        //shoot on timer
+                        if (shootTimer <= 0)
+                            shoot();
+                    }
+                }
+            }
+            else {
+                //move to last seen
+                agent.stoppingDistance = 1;
+            }
         }
 
-	private RaycastHit hit;
-	private bool LineOfSight (Transform targetView) {
-		if (Vector3.Angle(targetView.position - transform.position, transform.forward) <= fov && 
-				Physics.Linecast(transform.position, targetView.position, out hit) && hit.collider.transform == targetView) { 
-			return true;
-		}
-		return false;
-	}
+        //checks if player is in field of view
+        private RaycastHit hit;
+	    private bool LineOfSight (Transform targetView) {
+		    if (Vector3.Angle(targetView.position - transform.position, transform.forward) <= fov && 
+				    Physics.Linecast(transform.position + transform.forward, targetView.position, out hit) && hit.collider.transform == targetView) {
+			    return true;
+		    }
+		    return false;
+	    }
 
-	private void shootTarget(Transform targetShoot) {
-		GameObject clone;
-		clone = Instantiate(projectile, transform.position + transform.forward, Quaternion.identity) as GameObject;
-		projectile.transform.LookAt(targetShoot);
-		projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed);
+	    private void shoot() {
+		    Rigidbody clone;
+            clone = Instantiate(projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
+            clone.AddForce(clone.transform.forward * projectileSpeed);
+            shootTimer = gunTimer;
+            if (ammo-- <= 0) is_Berserk = true;
+	    }
+    
+	    private void setWeapon(GameObject weapon) {
+		    //if for each weapon
+	    }
 
-		shootTimer = gunTimer;
-	}
 
-	private void setWeapon(GameObject weapon) {
-		//if for each weapon
-	}
-
-}
+        public void getEaten()
+        {
+            gameObject.GetComponent<Collider>().isTrigger = true;
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            is_Eaten = true;
+        }
+    }
 }
