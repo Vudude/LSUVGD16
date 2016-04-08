@@ -10,15 +10,16 @@ public class SpitOut: MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetMouseButtonDown(1))
+		if (Input.GetKey('Q') && GetComponent<HealthTestv2>().hasAbility)
         {
             Rigidbody clone;
             clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
             clone.velocity = transform.TransformDirection(Vector3.forward * 10);
+			GetComponent<Ammo> ().removeWeapon ();
         }
 	}
 }

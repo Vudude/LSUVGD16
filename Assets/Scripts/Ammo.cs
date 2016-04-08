@@ -34,6 +34,7 @@ public class Ammo : MonoBehaviour
 			sniper.gameObject.SetActive (false);
 			smg.gameObject.SetActive (false);
 			GetComponent<HealthTestv2> ().currentHealth = 0;
+			GetComponent<HealthTestv2> ().hasAbility = false;
 		}
 
 
@@ -89,5 +90,15 @@ public class Ammo : MonoBehaviour
 	{
 		GUI.contentColor = Color.black;
 		GUI.Label (ammoLabel, "Ammo: " + ammoCount, "color");  
+	}
+
+
+	public void removeWeapon()
+	{
+		pistol.gameObject.SetActive (false);
+		bazooka.gameObject.SetActive (false);
+		sniper.gameObject.SetActive (false);
+		smg.gameObject.SetActive (false);
+		GetComponent<HealthTestv2> ().currentHealth = 0;
 	}
 }
