@@ -7,10 +7,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
     public class EnemyAI : MonoBehaviour 
     {
-
 	    private NavMeshAgent agent;
 	    private ThirdPersonCharacter character;
-	    public Transform player;
+		public Transform player;
 	    public float fov = 90;
 	    public float shootDistance = 10;
         public float RotationSpeed = 5;
@@ -28,10 +27,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	    private bool is_Moving = false;
 
 	    //temporary setters for variables (to be initialized depending on weapon)
-	    public Rigidbody projectile;
-	    public float projectileSpeed;
-	    public float gunTimer;
+		public Rigidbody projectile;
+	    public float projectileSpeed = 999;
+	    public float gunTimer = 3f;
         public int ammo = 10;
+		public string weapon = "pistol";
 
 	    // Use this for initialization
 	    void Start () 
@@ -47,6 +47,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		    //initial setup for timer (to be initialized depending on weapon)
 		    shootTimer = gunTimer;
+			setWeapon (weapon);
 
 	    }
 
@@ -107,8 +108,64 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             if (ammo-- <= 0) is_Berserk = true;
 	    }
     
-	    private void setWeapon(GameObject weapon) {
-		    //if for each weapon
+	    private void setWeapon(string weapon) 
+		{
+			if (weapon == "pistol") {
+				ammo = 10;
+				projectileSpeed = 1000;
+				gunTimer = 1f;
+				shootDistance = 20;
+				projectile = GameObject.Find ("pistolBullet").GetComponent<Rigidbody>();
+			}
+
+			else if (weapon == "smg") {
+				ammo = 30;
+				projectileSpeed = 1500;
+				gunTimer = 0.3f;
+				shootDistance = 20;
+				projectile = GameObject.Find ("smgBullet").GetComponent<Rigidbody>();
+			}
+
+			else if (weapon == "sniper") {
+				ammo = 10;
+				projectileSpeed = 2000;
+				gunTimer = 5f;
+				shootDistance = 40;
+				projectile = GameObject.Find ("sniperBullet").GetComponent<Rigidbody>();
+			}
+
+			else if (weapon == "bazooka") {
+				ammo = 5;
+				projectileSpeed = 1000;
+				gunTimer = 3f;
+				shootDistance = 40;
+				projectile = GameObject.Find ("bazookaBullet").GetComponent<Rigidbody>();
+			}
+
+				//projectileSpeed 
+				//pstol= 1000;
+				//bazooka = 1000
+				//smg = 1500
+				//sniper = 2000
+
+				//ammo
+				//pistol = 10
+				//smg = 30
+				//bazooka = 5
+				//sniper = 10
+
+				//rates
+				//pistol = 1
+				//smg 0.3
+				//bazooka = 3
+				//sniper = 5
+
+				//shoot distamnce
+				//pistol = 15
+				//smg = 10
+				//sniper = 40
+				//bazooka = 
+			
 	    }
 
 
@@ -118,5 +175,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             is_Eaten = true;
         }
+
+		void OnTriggerEnter(Collider other)
+		{
+
+			if (other.gameObject.CompareTag ("Player") && is_Berserk == true) 
+			{
+				other.gameObject.GetComponent<HealthTestv2> ().takeDamage (100);
+			} 
+		}
     }
 }

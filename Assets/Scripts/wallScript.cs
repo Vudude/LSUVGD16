@@ -29,5 +29,24 @@ public class wallScript : MonoBehaviour {
         {
             Destroy(other.gameObject);
         }
+
+		else if (other.gameObject.CompareTag("merbySniperBullet"))
+		{
+			Destroy(other.gameObject);
+		}
+
+		else if (other.gameObject.CompareTag("merbyPistolBullet"))
+		{
+			Destroy(other.gameObject);
+		}
+
+		else if (other.gameObject.CompareTag("merbySMGBullet"))
+		{
+			Destroy(other.gameObject);
+		}
+		else if (other.gameObject.CompareTag("merbyBazookaBullet"))
+		{
+			Destroy(other.gameObject);
+		}
     }
 }

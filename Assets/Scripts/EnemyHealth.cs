@@ -57,6 +57,7 @@ public class EnemyHealth : MonoBehaviour {
 			Destroy(other.gameObject);
 			takeDamage (100);
 		}
+			
 	}
 
 	//a function that calculates the enemies new health after taking damage

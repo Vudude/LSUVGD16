@@ -6566,7 +6566,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6588,7 +6588,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -6596,13 +6596,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
-      value: pistolEnemy
+      value: smgEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Speed
@@ -6612,26 +6612,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: weapon
+      value: smg
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5472514, guid: e790b88c0bbf841dab8a6ccdb74d3aaa, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &140760810 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 140760809}
---- !u!114 &140760811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 140760810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1 &145272086 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}
@@ -18092,7 +18087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18114,7 +18109,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -18122,13 +18117,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
-      value: pistolEnemy
+      value: sniperEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Speed
@@ -18138,26 +18133,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: weapon
+      value: sniper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5477560, guid: 3288eed2ceaf14963a3a55796e872469, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &415494102 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 415494101}
---- !u!114 &415494103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 415494102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1001 &417869738
 Prefab:
   m_ObjectHideFlags: 0
@@ -20807,7 +20797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
@@ -20829,7 +20819,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -20837,13 +20827,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
-      value: bazookaEnemy
+      value: pistolEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Speed
@@ -20853,26 +20843,17 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: weapon
+      value: pistol
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &462575024 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 462575023}
---- !u!114 &462575025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 462575024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1 &464507973
 GameObject:
   m_ObjectHideFlags: 0
@@ -31356,7 +31337,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -31364,7 +31345,7 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
@@ -31380,26 +31361,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &764280225 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 764280224}
---- !u!114 &764280226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 764280225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1 &764720584 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}
@@ -33945,72 +33913,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.53267515
+      value: 0.5326752
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.07034045
+      value: 0.070340455
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.83613265
+      value: 0.83613276
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.11041513
+      value: -0.110415146
       objectReference: {fileID: 0}
-    - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11480858, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_TagString
-      value: pistolEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_Speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-      propertyPath: target
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
       value: 
       objectReference: {fileID: 709240335}
+    - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_TagString
+      value: bazookaEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: weapon
+      value: bazooka
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &846837662 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 846837661}
---- !u!114 &846837663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 846837662}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1 &849789744 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}
@@ -39829,7 +39768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
@@ -39851,7 +39790,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -39859,13 +39798,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
-      value: pistolEnemy
+      value: bazookaBullet
       objectReference: {fileID: 0}
     - target: {fileID: 19582376, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_Speed
@@ -39875,26 +39814,21 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: weapon
+      value: bazooka
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1003467367 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 1003467366}
---- !u!114 &1003467368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1003467367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1001 &1005270722
 Prefab:
   m_ObjectHideFlags: 0
@@ -54358,7 +54292,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411896, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 486090, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_LocalRotation.x
@@ -54380,7 +54314,7 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -54388,7 +54322,7 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11493532, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 709240335}
@@ -54404,26 +54338,13 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 709240335}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1341080216 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
-  m_PrefabInternal: {fileID: 1341080215}
---- !u!114 &1341080217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1341080216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
 --- !u!1001 &1343082136
 Prefab:
   m_ObjectHideFlags: 0
@@ -55074,7 +54995,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349638109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f28cd71811daa97478ac8d66809c294a, type: 3}
+  m_Script: {fileID: 11500000, guid: 436cc93c0b8b4422c8ec5e6efd8a5c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1349638111
@@ -79925,13 +79846,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 709240335}
-  distance: 5
+  manualDistance: 5
   xSpeed: 120
   ySpeed: 120
   yMinLimit: -20
   yMaxLimit: 80
   distanceMin: 0.5
-  distanceMax: 55
+  distanceMax: 10
 --- !u!81 &2015214705
 AudioListener:
   m_ObjectHideFlags: 0
@@ -84764,7 +84685,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: a8270c5a174e97c47ba7ead55c8e81be, type: 2}
+  - {fileID: 2100000, guid: 48637563137194f4c8bf1070cbcd61a8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
