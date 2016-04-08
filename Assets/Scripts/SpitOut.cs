@@ -13,8 +13,8 @@ public class SpitOut: MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		if (Input.GetKey('Q') && GetComponent<HealthTestv2>().hasAbility)
+		Debug.Log ("State of merby abilty: " + GetComponent<HealthTestv2> ().hasAbility);
+		if (Input.GetKey("q") && GetComponent<HealthTestv2>().hasAbility)
         {
             Rigidbody clone;
             clone = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;

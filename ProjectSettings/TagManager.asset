@@ -17,6 +17,7 @@ TagManager:
   - smgEnemy
   - sniperEnemy
   - bazookaEnemy
+  - merbySpittingProjectile
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,8 @@ public class enemyShoot : MonoBehaviour {
 
 
 	public float shootTimer = 0;
-	public GameObject projectile;
+	public Rigidbody projectile;
+	private bool is_Eaten = false;
 
 	// Use this for initialization
 	void Start () 
@@ -21,10 +22,17 @@ public class enemyShoot : MonoBehaviour {
 			shootTimer = shootTimer - Time.deltaTime;
 		else 
 		{
-			GameObject clone;
-			clone = Instantiate (projectile, transform.position + transform.forward + Vector3.up, Quaternion.identity) as GameObject;
-			clone.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 100);
+			Rigidbody clone;
+			clone = Instantiate(projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
+			clone.velocity = transform.TransformDirection (Vector3.forward * 10);
 			shootTimer = 2;
 		}
+	}
+
+	public void getEaten()
+	{
+		gameObject.GetComponent<Collider>().isTrigger = true;
+		gameObject.GetComponent<Rigidbody>().useGravity = false;
+		is_Eaten = true;
 	}
 }

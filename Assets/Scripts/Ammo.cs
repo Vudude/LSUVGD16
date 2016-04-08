@@ -100,5 +100,8 @@ public class Ammo : MonoBehaviour
 		sniper.gameObject.SetActive (false);
 		smg.gameObject.SetActive (false);
 		GetComponent<HealthTestv2> ().currentHealth = 0;
+		ammoCount = 0;
+		GetComponent<HealthTestv2> ().hasAbility = false;
+
 	}
 }
