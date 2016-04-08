@@ -9,6 +9,14 @@ TagManager:
   - merbySniperBullet
   - pistolBullet
   - pistolEnemy
+  - merbyBazookaBullet
+  - merbySMGBullet
+  - sniperBullet
+  - bazookaBullet
+  - smgBullet
+  - smgEnemy
+  - sniperEnemy
+  - bazookaEnemy
   layers:
   - Default
   - TransparentFX

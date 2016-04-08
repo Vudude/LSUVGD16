@@ -114,7 +114,7 @@ public class HealthBar : MonoBehaviour {
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end
 		//FIXME change according to multiple abilities
-		if (other.gameObject.CompareTag ("ability")) 
+		if (other.gameObject.CompareTag ("bazookaEnemny")) 
 		{
 			Destroy(other.gameObject);
 			currentHealth = abilityHealth;

@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class HealthTestv2 : MonoBehaviour {
 
+
+	public GameObject healthBar;
+
 	//the player's starting health upon getting an ablility
 	public int abilityHealth = 100;
 
@@ -20,8 +23,18 @@ public class HealthTestv2 : MonoBehaviour {
 	//public bool newAbility = false;
 
 	//boolean that is true when merby has an ability
-	public bool hasAbility = false;
+	public bool hasPistolAbility = false;
 
+	//boolean that is true when merby has an ability
+	public bool hasSMGAbility = false;
+
+	//boolean that is true when merby has an ability
+	public bool hasBazookaAbility = false;
+
+	//boolean that is true when merby has an ability
+	public bool hasSniperAbility = false;
+
+	public bool hasAbility = false;
 	//boolean that is true when merby takes damage
 	//public bool takeDamage = false;
 
@@ -32,6 +45,20 @@ public class HealthTestv2 : MonoBehaviour {
 
 	//box for health
 	Rect healthLabel = new Rect(60,60,60,60);
+
+	public void barDamage()
+	{
+		float barHealth = (float)currentHealth / 100f;
+		healthBar.transform.localScale = new Vector3 (barHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
+	}
+		
+	public void initialBarDamage()
+	{
+		float barHealth =0;
+		healthBar.transform.localScale = new Vector3 (barHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
+	}
 
 	//function that calculates merby's new health. Takes an integer that represents the gun's damage
 	//if you take damage and your health is zero, you die
@@ -55,11 +82,17 @@ public class HealthTestv2 : MonoBehaviour {
 			else if (damage > currentHealth) 
 			{
 				currentHealth = 0;
+				hasPistolAbility = false;
+				hasBazookaAbility = false;
+				hasSMGAbility = false;
+				hasSniperAbility = false;
 				hasAbility = false;
 			} 
 
 			else
 				currentHealth = currentHealth - damage;
+
+			barDamage ();
 		}
 
 
@@ -78,6 +111,7 @@ public class HealthTestv2 : MonoBehaviour {
 	{
 		currentHealth = initialHealth;
 		OnGUI ();
+		barDamage ();
 	}
 
 	void Update()
@@ -96,6 +130,7 @@ public class HealthTestv2 : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 			takeDamage (20);
+			barDamage ();
 			//Debug.Log ("collision happened inside");
 		}
 
@@ -104,12 +139,41 @@ public class HealthTestv2 : MonoBehaviour {
 		//resets newAbility at the end
 		//FIXME change according to multiple abilities
 		//if (other.gameObject.CompareTag ("ability")) 
-		if (other.gameObject.CompareTag ("pistolEnemy") || other.gameObject.CompareTag ("smgEnemy") || other.gameObject.CompareTag ("sniperEnemy") 
-			|| other.gameObject.CompareTag ("bazookaEnemy"))
+		if (other.gameObject.CompareTag ("pistolEnemy"))
 		{
 			Destroy(other.gameObject);
 			currentHealth = abilityHealth;
+			hasPistolAbility = true;
 			hasAbility = true;
+			barDamage ();
+		}
+			
+		else if (other.gameObject.CompareTag ("smgEnemy"))
+		{
+			Destroy(other.gameObject);
+			currentHealth = abilityHealth;
+			hasSMGAbility = true;
+			hasAbility = true;
+			barDamage ();
+		}
+
+		else if (other.gameObject.CompareTag ("sniperEnemy")) 
+		{
+			Destroy(other.gameObject);
+			currentHealth = abilityHealth;
+			hasSniperAbility = true;
+			hasAbility = true;
+			barDamage ();
+		}
+
+
+		else if(other.gameObject.CompareTag ("bazookaEnemy"))
+		{
+			Destroy(other.gameObject);
+			currentHealth = abilityHealth;
+			hasBazookaAbility = true;
+			hasAbility = true;
+			barDamage ();
 		}
 
 	
