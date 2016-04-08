@@ -175,6 +175,10 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 122566, guid: 7736a8bd954142d49aea78108e145c89, type: 2}
   m_PrefabInternal: {fileID: 483014830}
+--- !u!1 &483014832 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 105212, guid: 7736a8bd954142d49aea78108e145c89, type: 2}
+  m_PrefabInternal: {fileID: 483014830}
 --- !u!114 &483014833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,15 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ed216cb359847ad80f935cbe194421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
   abilityHealth: 100
   initialHealth: 1000
   currentHealth: 0
   damageColour: {r: 1, g: 0, b: 0, a: 0.1}
-  hasPistolAbility: 0
-  hasSMGAbility: 0
-  hasBazookaAbility: 0
-  hasSniperAbility: 0
   hasAbility: 0
   hasInvincibility: 0
   invincibleTimer: 2
@@ -227,12 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f562a2871f58b45b4b7b52f96e05177b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoCount: 0
   projectile: {fileID: 0}
-  pistol: {fileID: 0}
-  sniper: {fileID: 0}
-  bazooka: {fileID: 0}
-  smg: {fileID: 0}
+  gun: {fileID: 483014832}
 --- !u!114 &483014836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 483014837}
-  manualDistance: 5
+  distance: 5
   xSpeed: 120
   ySpeed: 120
   yMinLimit: -20
@@ -539,8 +534,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 483014837}
+  fov: 90
+  shootDistance: 10
+  RotationSpeed: 5
+  moveSpeed: 2
+  berserkSpeed: 5
   projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  shootTimer: 0
+  projectileSpeed: 500
+  gunTimer: 2
+  ammo: 10
 --- !u!1 &2101512127
 GameObject:
   m_ObjectHideFlags: 0

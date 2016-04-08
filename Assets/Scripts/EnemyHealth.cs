@@ -19,7 +19,6 @@ public class EnemyHealth : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		
-        Debug.Log("collision");
 		if (other.gameObject.CompareTag ("Player") && beingEaten)
         {
             Destroy(gameObject);
@@ -67,11 +66,4 @@ public class EnemyHealth : MonoBehaviour {
 			if (currentHealth <= 0)
 			gameObject.SetActive (false);
 	}
-
-    public void getEaten()
-    {
-        gameObject.GetComponent<Collider>().isTrigger = true;
-        gameObject.GetComponent<Rigidbody>().useGravity = false;
-        beingEaten = true;
-    }
 }
