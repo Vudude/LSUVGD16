@@ -14,7 +14,7 @@ public class wallScript : MonoBehaviour {
         {
             Destroy(other.gameObject);
         }
-
+			
         else if (other.gameObject.CompareTag("smgBullet"))
         {
             Destroy(other.gameObject);
