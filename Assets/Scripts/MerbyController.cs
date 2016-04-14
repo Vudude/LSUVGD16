@@ -10,6 +10,7 @@ public class MerbyController : MonoBehaviour {
 
     public float lookSens = 100f;
     public float jumpSpeed = 5;
+    private bool isGrounded = true;
 
 
     void Start ()
@@ -27,21 +28,70 @@ public class MerbyController : MonoBehaviour {
             Debug.Break();
         }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            transform.Translate(Vector3.left * strafeSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            transform.Translate(Vector3.right * strafeSpeed * Time.deltaTime);
+        //if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        //    GetComponent<Rigidbody>().MovePosition(transform.position + transform.forward * moveSpeed * Time.deltaTime);
+        //if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        //    GetComponent<Rigidbody>().MovePosition(transform.position - transform.forward * moveSpeed * Time.deltaTime);
+        //if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        //    GetComponent<Rigidbody>().MovePosition(transform.position - transform.right * moveSpeed * Time.deltaTime);
+        //if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        //    GetComponent<Rigidbody>().MovePosition(transform.position + transform.right * moveSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Space))
+        Vector3 movement = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.up * jumpSpeed * Time.deltaTime, Space.World);
+            movement = movement + transform.forward;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            movement = movement - transform.forward;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            movement = movement - transform.right;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            movement = movement + transform.right;
+        }
+
+        GetComponent<Rigidbody>().MovePosition(transform.position + movement * moveSpeed * Time.deltaTime);
+
+        CheckGroundStatus();
+
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            GetComponent<Rigidbody>().AddForce(transform.up * jumpSpeed);
+            //GetComponent<Rigidbody>().AddExplosionForce(jumpSpeed, transform.position, 5.0f, 3.0f);
         }
 
         transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
     }
-    
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+    }
+
+    void CheckGroundStatus()
+    {
+        //RaycastHit hitInfo;
+        Vector3 center = transform.TransformPoint(GetComponent<CapsuleCollider>().center);
+        float CCHeightDiv2 = GetComponent<CapsuleCollider>().height / 2;
+        // helper to visualise the ground check ray in the scene view
+        Debug.DrawLine(center, new Vector3(center.x, center.y - CCHeightDiv2, center.z));
+        
+        // 0.1f is a small offset to start the ray from inside the character
+        // it is also good to note that the transform position in the sample assets is at the base of the character
+        if (Physics.Raycast(center, Vector3.down, CCHeightDiv2 +.1f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+
 }
