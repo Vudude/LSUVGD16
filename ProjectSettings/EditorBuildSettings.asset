@@ -12,6 +12,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/hub1.0.unity
   - enabled: 0
-    path: Assets/Scenes/level1.0.unity
+    path: Assets/Scenes/Level1.0.unity
   - enabled: 0
     path: Assets/Scenes/level2.1.unity
