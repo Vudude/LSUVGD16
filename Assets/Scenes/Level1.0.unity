@@ -6624,6 +6624,10 @@ Prefab:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 5472514, guid: e790b88c0bbf841dab8a6ccdb74d3aaa, type: 2}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -18145,6 +18149,10 @@ Prefab:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 5477560, guid: 3288eed2ceaf14963a3a55796e872469, type: 2}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -20851,6 +20859,14 @@ Prefab:
       propertyPath: weapon
       value: pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1753459798}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -31365,6 +31381,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 709240335}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -33947,6 +33967,10 @@ Prefab:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -39826,6 +39850,10 @@ Prefab:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -44852,7 +44880,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1127921929}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.05, y: 1, z: 0.05}
@@ -54342,6 +54370,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 709240335}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_IsPrefabParent: 0
@@ -69541,6 +69573,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 1, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1753459798 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35,
+    type: 2}
+  m_PrefabInternal: {fileID: 306714996}
 --- !u!1001 &1759975204
 Prefab:
   m_ObjectHideFlags: 0

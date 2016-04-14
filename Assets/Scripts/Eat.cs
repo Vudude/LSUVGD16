@@ -10,7 +10,8 @@ public class Eat : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 
 		if (Input.GetKey(KeyCode.E) && GetComponent<HealthTestv2>().hasAbility == false)
         {
