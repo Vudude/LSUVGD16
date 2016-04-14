@@ -4332,6 +4332,10 @@ Prefab:
       propertyPath: m_TagString
       value: pistolEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -11993,6 +11997,10 @@ Prefab:
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
       value: pistolEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -20874,6 +20882,10 @@ Prefab:
     - target: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_TagString
       value: pistolEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11414820, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}

@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	    private float shootTimer;
         private Quaternion _lookRotation;
         private Vector3 _direction;
-        private bool is_Berserk = false;
+        public bool is_Berserk = false;
         private bool is_Eaten = false;
 
         //for animation purposes (not yet used)
@@ -51,7 +51,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 	    }
 
-        private void Update()
+        public void Update()
         {
             shootTimer -= Time.deltaTime;
 
@@ -100,7 +100,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		    return false;
 	    }
 
-	    private void shoot() {
+	    public void shoot() {
 		    Rigidbody clone;
             clone = Instantiate(projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
             clone.AddForce(clone.transform.forward * projectileSpeed);
@@ -175,7 +175,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             is_Eaten = true;
         }
-
+		/*
 		void OnTriggerEnter(Collider other)
 		{
 
@@ -184,5 +184,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				other.gameObject.GetComponent<HealthTestv2> ().takeDamage (100);
 			} 
 		}
+		*/
+
     }
 }

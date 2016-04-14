@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Ammo : MonoBehaviour 
 {
@@ -53,37 +54,85 @@ public class Ammo : MonoBehaviour
 
 	}
 
+	public void beserkPistolTrigger()
+	{
+		ammoCount = 1;
+		pistol.gameObject.SetActive (true);
+	}
 
+	public void beserkSMGTrigger()
+	{
+		ammoCount = 1;
+		smg.gameObject.SetActive (true);
+	}
+
+	public void beserkSniperTrigger()
+	{
+		ammoCount = 1;
+		sniper.gameObject.SetActive (true);
+	}
+
+	public void beserkBazookaTrigger()
+	{
+		ammoCount = 1;
+		bazooka.gameObject.SetActive (true);
+	}
+
+	public void pistolTrigger()
+	{
+		ammoCount = 15;
+		pistol.gameObject.SetActive (true);
+	}
+
+	public void smgTrigger()
+	{
+		ammoCount = 10;
+		smg.gameObject.SetActive (true);
+	}
+
+	public void sniperTrigger()
+	{
+		ammoCount = 5;
+		sniper.gameObject.SetActive (true);
+	}
+
+	public void bazookaTrigger()
+	{
+		ammoCount = 5;
+		bazooka.gameObject.SetActive (true);
+	}
+	/*
 	void OnTriggerEnter(Collider other)
 	{
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end
-		if (other.gameObject.CompareTag ("pistolEnemy")) //or pistolEnemy
+		if (other.gameObject.CompareTag ("pistolEnemy") && other.GetComponent<EnemyAI> ().is_Berserk == false) //or pistolEnemy
 		{
 			ammoCount = 15;
 			pistol.gameObject.SetActive (true);
 
 		}
 
-		else if (other.gameObject.CompareTag ("smgEnemy")) 
+		else if (other.gameObject.CompareTag ("smgEnemy") && other.GetComponent<EnemyAI> ().is_Berserk == false) 
 		{
 			ammoCount = 10;
 			smg.gameObject.SetActive (true);
 		}
 
-		else if (other.gameObject.CompareTag ("sniperEnemy")) 
+		else if (other.gameObject.CompareTag ("sniperEnemy") && other.GetComponent<EnemyAI> ().is_Berserk == false) 
 		{
 			ammoCount = 5;
 			sniper.gameObject.SetActive (true);
 		}
 
-		else if (other.gameObject.CompareTag ("bazookaEnemy")) 
+		else if (other.gameObject.CompareTag ("bazookaEnemy") && other.GetComponent<EnemyAI> ().is_Berserk == false) 
 		{
 			ammoCount = 5;
 			bazooka.gameObject.SetActive (true);
 		}
 
 	}
+	*/
 
 
 	public void OnGUI()

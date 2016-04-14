@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class HealthTestv2 : MonoBehaviour {
 
 
 	public GameObject healthBar;
+
+	public bool abilityHit = false;
 
 	//the player's starting health upon getting an ablility
 	public int abilityHealth = 100;
@@ -57,6 +60,11 @@ public class HealthTestv2 : MonoBehaviour {
 	{
 		float barHealth =0;
 		healthBar.transform.localScale = new Vector3 (barHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
+	}
+
+	public void ammoSystem()
+	{
 
 	}
 
@@ -123,60 +131,14 @@ public class HealthTestv2 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other)
-	{	//Debug.Log ("collision happened");
-
-
-		if (other.gameObject.CompareTag ("pistolBullet")) 
-		{
-			Destroy(other.gameObject);
-			takeDamage (20);
-			barDamage ();
-			//Debug.Log ("collision happened inside");
-		}
-
+	{	
+		Debug.Log ("collision happened");
 
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end
 		//FIXME change according to multiple abilities
 		//if (other.gameObject.CompareTag ("ability")) 
-		if (other.gameObject.CompareTag ("pistolEnemy"))
-		{
-			Destroy(other.gameObject);
-			currentHealth = abilityHealth;
-			hasPistolAbility = true;
-			hasAbility = true;
-			barDamage ();
-		}
-			
-		else if (other.gameObject.CompareTag ("smgEnemy"))
-		{
-			Destroy(other.gameObject);
-			currentHealth = abilityHealth;
-			hasSMGAbility = true;
-			hasAbility = true;
-			barDamage ();
-		}
 
-		else if (other.gameObject.CompareTag ("sniperEnemy")) 
-		{
-			Destroy(other.gameObject);
-			currentHealth = abilityHealth;
-			hasSniperAbility = true;
-			hasAbility = true;
-			barDamage ();
-		}
-
-
-		else if(other.gameObject.CompareTag ("bazookaEnemy"))
-		{
-			Destroy(other.gameObject);
-			currentHealth = abilityHealth;
-			hasBazookaAbility = true;
-			hasAbility = true;
-			barDamage ();
-		}
-
-	
 		//calls take damage for each type of bullet collided with
 		if (other.gameObject.CompareTag ("pistolBullet")) 
 		{
@@ -202,10 +164,120 @@ public class HealthTestv2 : MonoBehaviour {
 			Destroy(other.gameObject);
 			takeDamage (100);
 		}
+
+		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("pistolEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = 50;
+			hasPistolAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().beserkPistolTrigger ();
+			abilityHit = true;
+		}
+
+		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("smgEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = 50;
+			hasSMGAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().beserkSMGTrigger ();
+			abilityHit = true;
+		}
+
+		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("sniperEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = 50;
+			hasSniperAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().beserkSniperTrigger ();
+			abilityHit = true;
+		}
+
+		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("bazookaEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = 50;
+			hasBazookaAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().beserkBazookaTrigger ();
+			abilityHit = true;
+		}
+
+
+		if (other.gameObject.CompareTag ("pistolEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Debug.Log ("pistol enemy collision happened");
+			Destroy (other.gameObject);
+			currentHealth = abilityHealth;
+			hasPistolAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().pistolTrigger ();
+
+		} 
+
+		else if (other.gameObject.CompareTag ("smgEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = abilityHealth;
+			hasSMGAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().smgTrigger ();
+		} 
+
+		else if (other.gameObject.CompareTag ("sniperEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = abilityHealth;
+			hasSniperAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().sniperTrigger ();
+		} 
+
+		else if (other.gameObject.CompareTag ("bazookaEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
+		{
+			Destroy (other.gameObject);
+			currentHealth = abilityHealth;
+			hasBazookaAbility = true;
+			hasAbility = true;
+			barDamage ();
+
+			GetComponent<Ammo> ().bazookaTrigger ();
+		} 
+
+		else 
+		{
+			if (other.GetComponent<EnemyAI> ().is_Berserk == true && (other.gameObject.CompareTag ("pistolEnemy") || other.gameObject.CompareTag ("smgEnemy") || other.gameObject.CompareTag ("sniperEnemy") || other.gameObject.CompareTag ("bazookaEnemy"))) 
+			{
+				if (abilityHit == false)
+					takeDamage (100);
+				else
+					abilityHit = false;
+				//GetComponent<Ammo> ().ammoCount = 0;
+			}
+		}
+
+		
 		OnGUI ();
 
 	}
 }
+
 
 
 /*// Update is called once per frame
