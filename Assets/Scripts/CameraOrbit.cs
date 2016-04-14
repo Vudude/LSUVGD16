@@ -52,14 +52,14 @@ public class CameraOrbit : MonoBehaviour
             manualDistance = Mathf.Clamp(manualDistance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
             RaycastHit hit;
-            if (Physics.Linecast(target.position, transform.position, out hit))
+            if (Physics.Linecast(target.position, rotation * new Vector3(0.0f, 0.0f, -manualDistance) + new Vector3(target.position.x, target.position.y + 2, target.position.z), out hit))
             {
-                autoDistance -= hit.distance - 1.0f;
+                autoDistance = hit.distance;
 				//autoDistance = Mathf.Lerp(autoDistance, hit.distance -1.0f, 3.0f * Time.deltaTime);
             }
             else
             {
-                autoDistance = Mathf.Lerp(autoDistance, manualDistance, 1.0f * Time.deltaTime);
+                autoDistance = Mathf.Lerp(autoDistance, manualDistance, 5.0f * Time.deltaTime);
             }
 
             transform.position = rotation * new Vector3(0.0f, 0.0f, -autoDistance) + new Vector3(target.position.x, target.position.y + 2, target.position.z);
