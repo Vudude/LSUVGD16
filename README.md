@@ -56,3 +56,31 @@ cd - change directory
 cd .. - directory above current
 
 ls - lists all files in current directory
+
+
+
+
+
+FOR ETHAN'S USE ONLY
+
+Drag all files into unity editor. Open Git Shell application.
+
+cd LSUVGD16
+
+git checkout master
+
+git fetch 
+
+git reset --hard origin/master
+
+git branch ethan/animations
+
+git checkout ethan/animations
+
+git add .
+
+git commit 
+
+A popup notedpad editor will show up. Write in a description like Add animations at the very top and save and exit.
+
+git push
