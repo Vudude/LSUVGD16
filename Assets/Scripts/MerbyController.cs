@@ -3,7 +3,11 @@ using System.Collections;
 
 public class MerbyController : MonoBehaviour {
 
-
+    Animator anim;
+    int jumpHash = Animator.StringToHash("Jump");
+    int idleHash = Animator.StringToHash("Idle");
+    int walkHash = Animator.StringToHash("Walk");
+    int eatHash = Animator.StringToHash("Eat");
 
     public float moveSpeed = 5f;
     public float strafeSpeed = 3f;
@@ -17,6 +21,8 @@ public class MerbyController : MonoBehaviour {
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
+
+        anim = GetComponentInChildren<Animator>();
 
     }
 
@@ -37,6 +43,8 @@ public class MerbyController : MonoBehaviour {
         //if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         //    GetComponent<Rigidbody>().MovePosition(transform.position + transform.right * moveSpeed * Time.deltaTime);
 
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+
         Vector3 movement = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
@@ -56,15 +64,33 @@ public class MerbyController : MonoBehaviour {
             movement = movement + transform.right;
         }
 
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            anim.Play(eatHash);
+            anim.SetBool("isEat", true);
+        }
+        else
+            anim.SetBool("isEat", false);
+
         GetComponent<Rigidbody>().MovePosition(transform.position + movement * moveSpeed * Time.deltaTime);
 
         CheckGroundStatus();
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (isGrounded)
+            anim.SetBool("isJump", false);
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             GetComponent<Rigidbody>().AddForce(transform.up * jumpSpeed);
-            //GetComponent<Rigidbody>().AddExplosionForce(jumpSpeed, transform.position, 5.0f, 3.0f);
+            anim.Play(jumpHash);
+            anim.SetBool("isJump", true);
         }
+
+        if (movement == Vector3.zero)
+            anim.Play(idleHash);
+        else
+            anim.Play(walkHash);
 
         transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
     }
