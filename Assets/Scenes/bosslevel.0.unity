@@ -13137,6 +13137,22 @@ Prefab:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11417360, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: hasAbility
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417360, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: hasSniperAbility
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417360, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: hasBazookaAbility
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418802, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: ammoCount
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
   m_IsPrefabParent: 0
@@ -13427,6 +13443,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 230da887401ade84d8e2a580ebd08eab, type: 3}
+      propertyPath: m_Name
+      value: BossTree
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 230da887401ade84d8e2a580ebd08eab, type: 3}
   m_IsPrefabParent: 0
@@ -13462,6 +13482,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 1, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2104904882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104904878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad33becd7045184eaf5b8a4b1571965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2122831765
 Prefab:
   m_ObjectHideFlags: 0
