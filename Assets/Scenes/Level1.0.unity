@@ -6610,7 +6610,7 @@ Prefab:
       objectReference: {fileID: 5472514, guid: e790b88c0bbf841dab8a6ccdb74d3aaa, type: 2}
     - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -18103,7 +18103,7 @@ Prefab:
       objectReference: {fileID: 5477560, guid: 3288eed2ceaf14963a3a55796e872469, type: 2}
     - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -33702,7 +33702,7 @@ Prefab:
       objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
     - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -39685,7 +39685,7 @@ Prefab:
       objectReference: {fileID: 5406354, guid: c6a5d0427c10b4644979de77e6079759, type: 2}
     - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -53846,7 +53846,7 @@ Prefab:
       objectReference: {fileID: 709240335}
     - target: {fileID: 13625092, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
@@ -60095,7 +60095,7 @@ Transform:
   - {fileID: 1732471938}
   - {fileID: 1550005178}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 8
 --- !u!1 &1508815522 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}
