@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class BossAI : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class BossAI : MonoBehaviour {
     public GameObject player;
 
     public float rotationSpeed;
+
+    private CapsuleCollider damage;
 
 
     private Quaternion _lookRotation;
@@ -26,6 +29,7 @@ public class BossAI : MonoBehaviour {
         spawnTiming = spawnTimer;
         spawnPoints = GameObject.FindGameObjectsWithTag("spawnPoint");
 	
+	damage = GetComponent<CapsuleCollider>();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +42,6 @@ public class BossAI : MonoBehaviour {
 
         //look at player
         _direction = (player.transform.position - transform.position).normalized;
-        Debug.Log(player.transform.position);
         _lookRotation = Quaternion.LookRotation(_direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 	
@@ -48,6 +51,11 @@ public class BossAI : MonoBehaviour {
             SpawnEnemy(spawnPoints[random].transform);
         }
         
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (
+			TakeDamage(collision);
 	}
 
 	private void Shoot() {
@@ -60,6 +68,12 @@ public class BossAI : MonoBehaviour {
 	private void SpawnEnemy(Transform spawn) {
 		GameObject enemy;
         enemy = Instantiate(enemyPrefab, spawn.position, spawn.rotation) as GameObject;
+	//enemy.GetComponent<EnemyAI>().setWeapon("bazooka");
         spawnTiming = spawnTimer;
+	}
+	
+	public void TakeDamage() {
+		
+
 	}
 }
