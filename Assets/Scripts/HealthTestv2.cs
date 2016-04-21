@@ -87,7 +87,7 @@ public class HealthTestv2 : MonoBehaviour {
 				SceneManager.LoadScene ("tutorial2");
 
 			}
-			else if (damage > currentHealth) 
+			else if (damage >= currentHealth) 
 			{
 				currentHealth = 0;
 				hasPistolAbility = false;
@@ -95,6 +95,7 @@ public class HealthTestv2 : MonoBehaviour {
 				hasSMGAbility = false;
 				hasSniperAbility = false;
 				hasAbility = false;
+				GetComponent<Ammo> ().ammoCount = 0;
 			} 
 
 			else
@@ -132,7 +133,7 @@ public class HealthTestv2 : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{	
-		Debug.Log ("collision happened");
+		//Debug.Log ("collision happened");
 
 		//if merby gets an ability, health becomes 100
 		//resets newAbility at the end

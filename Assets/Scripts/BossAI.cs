@@ -59,7 +59,7 @@ public class BossAI : MonoBehaviour {
 
 	private void Shoot() {
 		Rigidbody clone;
-            	clone = Instantiate(projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
+            	clone = Instantiate(projectile, transform.position + transform.forward * 5 , transform.rotation) as Rigidbody;
             	clone.AddForce(clone.transform.forward * projectileSpeed);
         shootTimer = gunTimer;
 	}
