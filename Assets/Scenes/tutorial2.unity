@@ -5323,19 +5323,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 505345780}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1971854550}
   fov: 90
   shootDistance: 10
   RotationSpeed: 5
   moveSpeed: 2
   berserkSpeed: 5
   is_Berserk: 0
-  projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
+  projectile: {fileID: 0}
   projectileSpeed: 999
   gunTimer: 3
   ammo: 10
@@ -10308,7 +10307,7 @@ RectTransform:
   - {fileID: 1660569662}
   - {fileID: 1761430923}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -11116,6 +11115,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5446032, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
       propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425502, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406746, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17746,6 +17753,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootTimer: 2
   projectile: {fileID: 395742531}
+--- !u!114 &1637828867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637828865}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 90
+  shootDistance: 10
+  RotationSpeed: 5
+  moveSpeed: 2
+  berserkSpeed: 5
+  is_Berserk: 0
+  projectile: {fileID: 0}
+  projectileSpeed: 999
+  gunTimer: 3
+  ammo: 10
+  weapon: pistol
 --- !u!1 &1640755378 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}
@@ -22651,6 +22680,28 @@ BoxCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100640, guid: 2f5870196dd31f6449338dd77b7bb582, type: 2}
   m_PrefabInternal: {fileID: 1078126493}
+--- !u!114 &2085171890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085171882}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b831d67e8e840bda22a3a714e6bc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 90
+  shootDistance: 10
+  RotationSpeed: 5
+  moveSpeed: 2
+  berserkSpeed: 5
+  is_Berserk: 0
+  projectile: {fileID: 0}
+  projectileSpeed: 999
+  gunTimer: 3
+  ammo: 10
+  weapon: pistol
 --- !u!114 &2085171891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22662,7 +22713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdc0158849794eeb96a4cc1d7a347f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootTimer: 0
+  shootTimer: 1
   projectile: {fileID: 108314, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
 --- !u!1001 &2086499496
 Prefab:
@@ -22954,7 +23005,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1 &2111796235 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: d6fe0b1adafc2d5458ad6e3ca89e582a, type: 3}

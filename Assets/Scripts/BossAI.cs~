@@ -54,7 +54,8 @@ public class BossAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-			//TakeDamage(collision);
+		if (
+			TakeDamage(collision);
 	}
 
 	private void Shoot() {

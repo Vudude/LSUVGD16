@@ -9,7 +9,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     {
 	    private NavMeshAgent agent;
 	    private ThirdPersonCharacter character;
-		public Transform player;
+		private Transform player;
 	    public float fov = 90;
 	    public float shootDistance = 10;
         public float RotationSpeed = 5;
@@ -38,6 +38,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	    {
 		    agent = GetComponentInChildren<NavMeshAgent>();
 		    character = GetComponent<ThirdPersonCharacter>();
+		    
+		    GameObject playerObject = GameObject.FindWithTag("Player") as GameObject;
+		    player = playerObject.transform;
 
 		    agent.updateRotation = true;
 		    agent.updatePosition = true;
@@ -108,7 +111,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             if (ammo-- <= 0) is_Berserk = true;
 	    }
     
-	    private void setWeapon(string weapon) 
+	    public void setWeapon(string weapon) 
 		{
 			if (weapon == "pistol") {
 				ammo = 10;
