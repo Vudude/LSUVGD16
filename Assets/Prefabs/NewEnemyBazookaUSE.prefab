@@ -121,7 +121,7 @@ GameObject:
   - 114: {fileID: 11435014}
   - 114: {fileID: 11465020}
   m_Layer: 0
-  m_Name: NewEnemyBazooka(USE)
+  m_Name: NewEnemyBazookaUSE
   m_TagString: bazookaEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
