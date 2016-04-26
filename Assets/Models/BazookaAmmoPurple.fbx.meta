@@ -1,27 +1,15 @@
 fileFormatVersion: 2
-guid: 11bd54dd60241e84183bdb5456c3a990
-timeCreated: 1461204008
+guid: d02a2133d20693c47a06253592ee858b
+timeCreated: 1461640104
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: barrel
-    100002: Body
-    100004: Sight
-    100006: //RootNode
-    400000: barrel
-    400002: Body
-    400004: Sight
-    400006: //RootNode
-    2300000: barrel
-    2300002: Body
-    2300004: Sight
-    3300000: barrel
-    3300002: Body
-    3300004: Sight
-    4300000: Body
-    4300002: barrel
-    4300004: Sight
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BazookaAmmo
   materials:
     importMaterials: 1
     materialName: 0
