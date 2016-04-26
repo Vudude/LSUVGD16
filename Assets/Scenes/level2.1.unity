@@ -53614,7 +53614,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455108, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 435740, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -53631,22 +53631,6 @@ Prefab:
     - target: {fileID: 435740, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.16353434
-      objectReference: {fileID: 0}
-    - target: {fileID: 199132, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9580080, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 05072269f90f6b149a1f134e6713a5d8, type: 3}
-    - target: {fileID: 13700720, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: 05072269f90f6b149a1f134e6713a5d8, type: 3}
-    - target: {fileID: 9580080, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
-      propertyPath: m_CullingMode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 261c97c27d1094a7798e6fbc644bb4b9, type: 2}
