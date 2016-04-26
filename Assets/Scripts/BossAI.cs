@@ -42,6 +42,7 @@ public class BossAI : MonoBehaviour {
 
         //look at player
         _direction = (player.transform.position - transform.position).normalized;
+	_direction = _direction - new Vector3(0, _direction.y, 0);
         _lookRotation = Quaternion.LookRotation(_direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
 	
@@ -59,7 +60,7 @@ public class BossAI : MonoBehaviour {
 
 	private void Shoot() {
 		Rigidbody clone;
-            	clone = Instantiate(projectile, transform.position + transform.forward * 5 , transform.rotation) as Rigidbody;
+            	clone = Instantiate(projectile, transform.position + transform.forward * 5 + Vector3.up , transform.rotation) as Rigidbody;
             	clone.AddForce(clone.transform.forward * projectileSpeed);
         shootTimer = gunTimer;
 	}

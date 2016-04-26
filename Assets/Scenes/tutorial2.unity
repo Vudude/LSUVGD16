@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000001, guid: daafdbd56aba02d41a22e052b9b4e33b,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -23602,7 +23603,7 @@ Transform:
   m_PrefabParentObject: {fileID: 425962, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1886602108}
-  m_LocalRotation: {x: -0.14252207, y: 0.69259477, z: -0.6879365, w: 0.16353436}
+  m_LocalRotation: {x: -0.14252205, y: 0.6925947, z: -0.6879364, w: 0.16353434}
   m_LocalPosition: {x: -0.0072290986, y: -0.0075896396, z: 0.00004843475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
