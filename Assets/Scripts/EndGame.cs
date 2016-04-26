@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class EndGame : MonoBehaviour {
     {
         if (co.gameObject.CompareTag("Player"))
         {
-            Application.Quit();
+			SceneManager.LoadScene("Scenes/level3");
         }
     }
 }

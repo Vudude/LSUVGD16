@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MerbyController : MonoBehaviour {
 
@@ -45,7 +46,35 @@ public class MerbyController : MonoBehaviour {
 
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
+
         Vector3 movement = Vector3.zero;
+
+		if (Input.GetKey(KeyCode.M))
+		{
+			SceneManager.LoadScene ("Scenes/tutorial2");
+		}
+		if (Input.GetKey(KeyCode.K))
+		{
+			SceneManager.LoadScene ("Scenes/Level1.0");
+		}
+
+		if (Input.GetKey(KeyCode.L))
+		{
+			SceneManager.LoadScene ("Scenes/level2.1");
+		}
+		if (Input.GetKey(KeyCode.Slash))
+		{
+			SceneManager.LoadScene ("Scenes/level3");
+		}
+		if (Input.GetKey (KeyCode.Semicolon))
+		{
+			SceneManager.LoadScene ("Scenes/bosslevel.0");
+		}
+
+		if (Input.GetKey(KeyCode.F1))
+		{
+			movement = movement + transform.forward;
+		}
 
         if (Input.GetKey(KeyCode.W))
         {

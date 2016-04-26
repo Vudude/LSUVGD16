@@ -54,7 +54,7 @@ public class CameraOrbit : MonoBehaviour
             RaycastHit hit;
             if (Physics.Linecast(target.position, rotation * new Vector3(0.0f, 0.0f, -manualDistance) + new Vector3(target.position.x, target.position.y + 2, target.position.z), out hit))
             {
-                autoDistance = hit.distance;
+                autoDistance = hit.distance-.7f; //minus offset to help prevent clipping
 				//autoDistance = Mathf.Lerp(autoDistance, hit.distance -1.0f, 3.0f * Time.deltaTime);
             }
             else
