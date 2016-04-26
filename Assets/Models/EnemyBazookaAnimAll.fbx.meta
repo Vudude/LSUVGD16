@@ -1,33 +1,33 @@
 fileFormatVersion: 2
-guid: 9f048a73f7de93546a7438087e0deb1d
-timeCreated: 1461199319
+guid: a6df48789f7365d4c9f6219b8677080a
+timeCreated: 1461633689
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: EnemyGeometry
-    100002: //RootNode
-    100004: ikHandle_Head
-    100006: ikHandle_l_arm
-    100008: ikHandle_l_foot
-    100010: ikHandle_l_hand
-    100012: ikHandle_l_Leg
-    100014: ikHandle_r_arm
-    100016: ikHandle_r_foot
-    100018: ikHandle_r_hand
-    100020: ikHandle_r_Leg
-    100022: ikHandle_upperBody
-    100024: ikHandle_upperSpine
-    100026: imagePlane1
-    100028: imagePlane2
-    100030: imagePlane3
-    100032: imagePlane4
-    100034: imagePlane5
-    100036: pCube1
-    100038: pCube2
-    100040: pCube3
-    100042: Pistol
-    100044: PistolGrip
+    100000: Bazooka
+    100002: BazookaGrip
+    100004: //RootNode
+    100006: EnemyGeometry
+    100008: ikHandle_Head
+    100010: ikHandle_l_arm
+    100012: ikHandle_l_foot
+    100014: ikHandle_l_hand
+    100016: ikHandle_l_Leg
+    100018: ikHandle_r_arm
+    100020: ikHandle_r_foot
+    100022: ikHandle_r_hand
+    100024: ikHandle_r_Leg
+    100026: ikHandle_upperBody
+    100028: ikHandle_upperSpine
+    100030: imagePlane1
+    100032: imagePlane2
+    100034: imagePlane3
+    100036: imagePlane4
+    100038: imagePlane5
+    100040: pCube1
+    100042: pCube2
+    100044: pCube3
     100046: PistolTip
     100048: pPipe1
     100050: skin_face_01
@@ -98,29 +98,29 @@ ModelImporter:
     100180: transform2
     100182: transform3
     100184: transform4
-    400000: EnemyGeometry
-    400002: //RootNode
-    400004: ikHandle_Head
-    400006: ikHandle_l_arm
-    400008: ikHandle_l_foot
-    400010: ikHandle_l_hand
-    400012: ikHandle_l_Leg
-    400014: ikHandle_r_arm
-    400016: ikHandle_r_foot
-    400018: ikHandle_r_hand
-    400020: ikHandle_r_Leg
-    400022: ikHandle_upperBody
-    400024: ikHandle_upperSpine
-    400026: imagePlane1
-    400028: imagePlane2
-    400030: imagePlane3
-    400032: imagePlane4
-    400034: imagePlane5
-    400036: pCube1
-    400038: pCube2
-    400040: pCube3
-    400042: Pistol
-    400044: PistolGrip
+    400000: Bazooka
+    400002: BazookaGrip
+    400004: //RootNode
+    400006: EnemyGeometry
+    400008: ikHandle_Head
+    400010: ikHandle_l_arm
+    400012: ikHandle_l_foot
+    400014: ikHandle_l_hand
+    400016: ikHandle_l_Leg
+    400018: ikHandle_r_arm
+    400020: ikHandle_r_foot
+    400022: ikHandle_r_hand
+    400024: ikHandle_r_Leg
+    400026: ikHandle_upperBody
+    400028: ikHandle_upperSpine
+    400030: imagePlane1
+    400032: imagePlane2
+    400034: imagePlane3
+    400036: imagePlane4
+    400038: imagePlane5
+    400040: pCube1
+    400042: pCube2
+    400044: pCube3
     400046: PistolTip
     400048: pPipe1
     400050: skin_face_01
@@ -192,11 +192,11 @@ ModelImporter:
     400182: transform3
     400184: transform4
     4300000: EnemyGeometry
-    4300002: Pistol
+    4300002: Bazooka
     7400000: AnimAll
     9500000: //RootNode
-    13700000: EnemyGeometry
-    13700002: Pistol
+    13700000: Bazooka
+    13700002: EnemyGeometry
   materials:
     importMaterials: 1
     materialName: 0
