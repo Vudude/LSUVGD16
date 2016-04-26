@@ -84,7 +84,7 @@ public class HealthTestv2 : MonoBehaviour {
 			if (currentHealth == 0) 
 			{
 				gameObject.SetActive (false);
-				SceneManager.LoadScene ("tutorial2");
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
 			}
 			else if (damage >= currentHealth) 

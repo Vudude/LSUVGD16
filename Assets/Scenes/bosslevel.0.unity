@@ -3663,7 +3663,7 @@ MonoBehaviour:
   spawnTimer: 5
   spawnPoints: []
   projectile: {fileID: 5491770, guid: 16925b1ee27664f17a178a8e9d11bd35, type: 2}
-  enemyPrefab: {fileID: 188166, guid: f1c0c7c66a9464df9b7cda123e8e2208, type: 2}
+  enemyPrefab: {fileID: 111826, guid: 7c9bbec17ac8b419bbba1848654ce86d, type: 2}
   player: {fileID: 1016518240}
   rotationSpeed: 20
   shootTimer: 2
@@ -15531,6 +15531,10 @@ Prefab:
     - target: {fileID: 11417360, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
       propertyPath: initialHealth
       value: 1000000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 178042, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11461428, guid: 3136bc6529cd44007a2f6a19740c3bdf, type: 2}
