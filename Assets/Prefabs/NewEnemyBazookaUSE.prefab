@@ -2198,7 +2198,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170978}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2445,6 +2445,10 @@ MonoBehaviour:
   gunTimer: 3
   ammo: 15
   weapon: bazooka
+  pistolSound: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
+  smgSound: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
+  sniperSound: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
+  bazookaSound: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
 --- !u!136 &13640610
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2645,6 +2649,22 @@ Prefab:
       propertyPath: m_TagString
       value: bazookaEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pistolSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
+    - target: {fileID: 0}
+      propertyPath: smgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sniperSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
+    - target: {fileID: 0}
+      propertyPath: bazookaSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111826}
