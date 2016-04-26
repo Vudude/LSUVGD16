@@ -33,6 +33,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public int ammo = 10;
 		public string weapon = "pistol";
 
+		private AudioSource source;
+
+		private AudioClip Ssound;
+		public AudioClip pistolSound;
+		public AudioClip smgSound;
+		public AudioClip sniperSound;
+		public AudioClip bazookaSound;
+
+		public void Awake()
+		{
+			source = GetComponent<AudioSource>();
+		}
+
+
 	    // Use this for initialization
 	    void Start () 
 	    {
@@ -109,6 +123,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             clone.AddForce(clone.transform.forward * projectileSpeed);
             shootTimer = gunTimer;
             if (ammo-- <= 0) is_Berserk = true;
+			source.PlayOneShot (Ssound);
 	    }
     
 	    public void setWeapon(string weapon) 
@@ -119,6 +134,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				gunTimer = 1f;
 				shootDistance = 20;
 				projectile = GameObject.Find ("pistolBullet").GetComponent<Rigidbody>();
+				Ssound = pistolSound;
 			}
 
 			else if (weapon == "smg") {
@@ -127,6 +143,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				gunTimer = 0.3f;
 				shootDistance = 20;
 				projectile = GameObject.Find ("smgBullet").GetComponent<Rigidbody>();
+				Ssound = smgSound;
 			}
 
 			else if (weapon == "sniper") {
@@ -135,6 +152,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				gunTimer = 5f;
 				shootDistance = 40;
 				projectile = GameObject.Find ("sniperBullet").GetComponent<Rigidbody>();
+				Ssound = sniperSound;
 			}
 
 			else if (weapon == "bazooka") {
@@ -143,6 +161,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				gunTimer = 3f;
 				shootDistance = 40;
 				projectile = GameObject.Find ("bazookaBullet").GetComponent<Rigidbody>();
+				Ssound = bazookaSound;
 			}
 
 				//projectileSpeed 
