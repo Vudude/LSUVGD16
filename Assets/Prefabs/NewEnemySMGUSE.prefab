@@ -1446,10 +1446,9 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 168906}
-  m_LocalRotation: {x: -0.073489584, y: -0.24521379, z: 0.1399662, w: 0.9564931}
-  m_LocalPosition: {x: -0.039918173, y: 0.002442463, z: -0.027874175}
+  m_GameObject: {fileID: 164648}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 451240}
