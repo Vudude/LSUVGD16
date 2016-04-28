@@ -22,6 +22,7 @@ public class wallScript : MonoBehaviour {
 
         else if (other.gameObject.CompareTag("bazookaBullet"))
         {
+			Debug.Log ("bazooka bullet hit");
             Destroy(other.gameObject);
         }
 
@@ -44,6 +45,7 @@ public class wallScript : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 		}
+
 		else if (other.gameObject.CompareTag("merbyBazookaBullet"))
 		{
 			Destroy(other.gameObject);

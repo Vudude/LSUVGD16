@@ -28,7 +28,7 @@ public class Ammo : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log ("I hate myself" + ammoCount);
+		//Debug.Log ("I hate myself" + ammoCount);
 		if (ammoCount == 0) 
 		{
 			pistol.gameObject.SetActive (false);
@@ -57,10 +57,10 @@ public class Ammo : MonoBehaviour
 
 	public void beserkPistolTrigger()
 	{
-		Debug.Log ("made it to beserkPistolTrigger");
-		Debug.Log (ammoCount);
+		//Debug.Log ("made it to beserkPistolTrigger");
+		//Debug.Log (ammoCount);
 		ammoCount = 1;
-		Debug.Log (ammoCount);
+		//Debug.Log (ammoCount);
 		pistol.gameObject.SetActive (true);
 	}
 
@@ -150,7 +150,7 @@ public class Ammo : MonoBehaviour
 
 	public void removeWeapon()
 	{
-		Debug.Log ("Did this happen?");
+		//Debug.Log ("Did this happen?");
 		pistol.gameObject.SetActive (false);
 		bazooka.gameObject.SetActive (false);
 		sniper.gameObject.SetActive (false);

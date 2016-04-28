@@ -184,7 +184,7 @@ public class HealthTestv2 : MonoBehaviour {
 
 		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("pistolEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
-			Debug.Log ("made it to Beserk hit you");
+			//Debug.Log ("made it to Beserk hit you");
 			Destroy (other.gameObject);
 			currentHealth = 25;
 			GetComponent<Ammo> ().beserkPistolTrigger ();
@@ -238,7 +238,7 @@ public class HealthTestv2 : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("pistolEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
-			Debug.Log ("pistol enemy collision happened");
+			//Debug.Log ("pistol enemy collision happened");
 			Destroy (other.gameObject);
 			currentHealth = abilityHealth;
 			hasPistolAbility = true;
@@ -291,7 +291,7 @@ public class HealthTestv2 : MonoBehaviour {
 			if (other.GetComponent<EnemyAI> ().is_Berserk == true && (other.gameObject.CompareTag ("pistolEnemy") || other.gameObject.CompareTag ("smgEnemy") || other.gameObject.CompareTag ("sniperEnemy") || other.gameObject.CompareTag ("bazookaEnemy"))) 
 			{
 
-				Debug.Log ("PLS DONT ACTIVATE");
+				//Debug.Log ("PLS DONT ACTIVATE");
 				if (abilityHit == false)
 					takeDamage (100);
 				else
