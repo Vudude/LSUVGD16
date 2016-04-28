@@ -11,7 +11,7 @@ public class HealthTestv2 : MonoBehaviour {
 	public bool abilityHit = false;
 
 	//the player's starting health upon getting an ablility
-	public int abilityHealth = 100;
+	public int abilityHealth = 50;
 
 	//the player's starting health
 	public int initialHealth = 0;
@@ -44,7 +44,7 @@ public class HealthTestv2 : MonoBehaviour {
 	//boolean that is true when merby takes damage and becomes invincible
 	public bool hasInvincibility = false;
 
-	public float invincibleTimer = 2;
+	public float invincibleTimer = 1;
 
 	private AudioSource source;
 
@@ -92,7 +92,7 @@ public class HealthTestv2 : MonoBehaviour {
 		if (hasInvincibility == false) 
 		{
 			hasInvincibility = true;
-			invincibleTimer = 2;
+			invincibleTimer = 1;
 
 			if (currentHealth == 0) 
 			{
@@ -184,13 +184,14 @@ public class HealthTestv2 : MonoBehaviour {
 
 		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("pistolEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
+			Debug.Log ("made it to Beserk hit you");
 			Destroy (other.gameObject);
-			currentHealth = 50;
+			currentHealth = 25;
+			GetComponent<Ammo> ().beserkPistolTrigger ();
 			hasPistolAbility = true;
 			hasAbility = true;
 			barDamage ();
 
-			GetComponent<Ammo> ().beserkPistolTrigger ();
 			abilityHit = true;
 			source.PlayOneShot (pickupSound, 0.5f);
 		}
@@ -198,7 +199,7 @@ public class HealthTestv2 : MonoBehaviour {
 		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("smgEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
 			Destroy (other.gameObject);
-			currentHealth = 50;
+			currentHealth = 25;
 			hasSMGAbility = true;
 			hasAbility = true;
 			barDamage ();
@@ -211,7 +212,7 @@ public class HealthTestv2 : MonoBehaviour {
 		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("sniperEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
 			Destroy (other.gameObject);
-			currentHealth = 50;
+			currentHealth = 25;
 			hasSniperAbility = true;
 			hasAbility = true;
 			barDamage ();
@@ -224,7 +225,7 @@ public class HealthTestv2 : MonoBehaviour {
 		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("bazookaEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
 		{
 			Destroy (other.gameObject);
-			currentHealth = 50;
+			currentHealth = 25;
 			hasBazookaAbility = true;
 			hasAbility = true;
 			barDamage ();
@@ -289,6 +290,8 @@ public class HealthTestv2 : MonoBehaviour {
 		{
 			if (other.GetComponent<EnemyAI> ().is_Berserk == true && (other.gameObject.CompareTag ("pistolEnemy") || other.gameObject.CompareTag ("smgEnemy") || other.gameObject.CompareTag ("sniperEnemy") || other.gameObject.CompareTag ("bazookaEnemy"))) 
 			{
+
+				Debug.Log ("PLS DONT ACTIVATE");
 				if (abilityHit == false)
 					takeDamage (100);
 				else
