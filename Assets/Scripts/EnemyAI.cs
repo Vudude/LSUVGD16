@@ -25,9 +25,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         //for animation purposes (not yet used)
 	    private bool is_Shooting = false;
 	    private bool is_Moving = false;
+        
+        //Animation Amendment
+        Animator anim;
+        int idleHash = Animator.StringToHash("Idle");
+        int runHash = Animator.StringToHash("Run");
+        private Vector3 deltaPosition;
 
-	    //temporary setters for variables (to be initialized depending on weapon)
-		public Rigidbody projectile;
+        //temporary setters for variables (to be initialized depending on weapon)
+        public Rigidbody projectile;
 	    public float projectileSpeed = 999;
 	    public float gunTimer = 3f;
         public int ammo = 10;
@@ -51,7 +57,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	    // Use this for initialization
 	    void Start () 
 	    {
-		    agent = GetComponentInChildren<NavMeshAgent>();
+            anim = GetComponentInChildren<Animator>();
+            deltaPosition = transform.position;
+
+            agent = GetComponentInChildren<NavMeshAgent>();
 		    character = GetComponent<ThirdPersonCharacter>();
 		    
 		    GameObject playerObject = GameObject.FindWithTag("Player") as GameObject;
@@ -72,6 +81,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public void Update()
         {
             shootTimer -= Time.deltaTime;
+
+            AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+            if (deltaPosition == transform.position)
+                anim.Play(idleHash);
+            else
+                anim.Play(runHash);
+            deltaPosition = transform.position;
 
             if (LineOfSight(player))
             {
