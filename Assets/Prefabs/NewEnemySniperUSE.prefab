@@ -1435,7 +1435,6 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
   m_GameObject: {fileID: 115284}
   m_LocalRotation: {x: -2.9345548e-14, y: -0.15003887, z: -1.9594657e-13, w: 0.9886801}
   m_LocalPosition: {x: -0.05345844, y: -1.4356106e-16, z: 0}
@@ -2388,11 +2387,7 @@ MonoBehaviour:
   projectileSpeed: 999
   gunTimer: 3
   ammo: 15
-  weapon: sniper
-  pistolSound: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
-  smgSound: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
-  sniperSound: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
-  bazookaSound: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
+  weapon: bazooka
 --- !u!114 &11421032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2688,23 +2683,7 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: pistolSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
-    - target: {fileID: 0}
-      propertyPath: smgSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
-    - target: {fileID: 0}
-      propertyPath: sniperSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
-    - target: {fileID: 0}
-      propertyPath: bazookaSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159742}
