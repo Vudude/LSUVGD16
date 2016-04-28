@@ -228,6 +228,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public void getEaten()
         {
+			is_Berserk = false;
             gameObject.GetComponent<Collider>().isTrigger = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             is_Eaten = true;
