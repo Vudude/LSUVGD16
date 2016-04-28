@@ -60,7 +60,10 @@ ModelImporter:
     400050: transform5
     400052: Upper_lip_01
     4300000: pSphere10
-    7400000: All
+    7400000: Walk
+    7400002: Jump
+    7400004: Idle
+    7400006: Eat
     9500000: //RootNode
     13700000: pSphere10
   materials:
@@ -83,7 +86,335 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: All
+      firstFrame: 21
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform5
+        weight: 1
+      - path: pSphere6
+        weight: 1
+      - path: pSphere6/transform4
+        weight: 1
+      - path: pSphere7
+        weight: 1
+      - path: pSphere7/transform3
+        weight: 1
+      - path: pSphere8
+        weight: 1
+      - path: pSphere8/transform2
+        weight: 1
+      - path: pSphere9
+        weight: 1
+      - path: pSphere9/transform1
+        weight: 1
+      - path: pSphere10
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/Hip_01
+        weight: 1
+      - path: Skeleton/Hip_01/joint5
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01/L_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02/R_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/joint7
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01/joint11
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01/joint9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Jump
+      takeName: All
+      firstFrame: 151
+      lastFrame: 173
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform5
+        weight: 1
+      - path: pSphere6
+        weight: 1
+      - path: pSphere6/transform4
+        weight: 1
+      - path: pSphere7
+        weight: 1
+      - path: pSphere7/transform3
+        weight: 1
+      - path: pSphere8
+        weight: 1
+      - path: pSphere8/transform2
+        weight: 1
+      - path: pSphere9
+        weight: 1
+      - path: pSphere9/transform1
+        weight: 1
+      - path: pSphere10
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/Hip_01
+        weight: 1
+      - path: Skeleton/Hip_01/joint5
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01/L_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02/R_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/joint7
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01/joint11
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01/joint9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idle
+      takeName: All
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform5
+        weight: 1
+      - path: pSphere6
+        weight: 1
+      - path: pSphere6/transform4
+        weight: 1
+      - path: pSphere7
+        weight: 1
+      - path: pSphere7/transform3
+        weight: 1
+      - path: pSphere8
+        weight: 1
+      - path: pSphere8/transform2
+        weight: 1
+      - path: pSphere9
+        weight: 1
+      - path: pSphere9/transform1
+        weight: 1
+      - path: pSphere10
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/Hip_01
+        weight: 1
+      - path: Skeleton/Hip_01/joint5
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01/L_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02/R_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/joint7
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01/joint11
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01/joint9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Eat
+      takeName: All
+      firstFrame: 211
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform5
+        weight: 1
+      - path: pSphere6
+        weight: 1
+      - path: pSphere6/transform4
+        weight: 1
+      - path: pSphere7
+        weight: 1
+      - path: pSphere7/transform3
+        weight: 1
+      - path: pSphere8
+        weight: 1
+      - path: pSphere8/transform2
+        weight: 1
+      - path: pSphere9
+        weight: 1
+      - path: pSphere9/transform1
+        weight: 1
+      - path: pSphere10
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/Hip_01
+        weight: 1
+      - path: Skeleton/Hip_01/joint5
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01
+        weight: 1
+      - path: Skeleton/Hip_01/L_leg_01/L_foot_01/L_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02
+        weight: 1
+      - path: Skeleton/Hip_01/R_leg_02/R_foot_02/R_toe_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/joint7
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Lower_lip_01/joint11
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01
+        weight: 1
+      - path: Skeleton/Hip_01/Spine_01/Upper_lip_01/joint9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -7,7 +7,8 @@ public class Ammo : MonoBehaviour
 {
 
 	public int ammoCount = 0;
-	Rect ammoLabel = new Rect(60,80,80,80);
+	//Rect ammoLabel = new Rect(120,160,160,160);
+	Rect ammoLabel = new Rect(Screen.width/21, Screen.height/9, Screen.width / 5, Screen.height / 5);
 	public Rigidbody projectile;
 	public GameObject pistol;
 	public GameObject sniper;
@@ -137,8 +138,10 @@ public class Ammo : MonoBehaviour
 
 	public void OnGUI()
 	{
-		GUI.contentColor = Color.black;
-		GUI.Label (ammoLabel, "Ammo: " + ammoCount, "color");  
+		var style = new GUIStyle("label");
+		style.fontSize = 25;
+		GUI.contentColor = Color.magenta;
+		GUI.Label (ammoLabel, "Ammo: " + ammoCount, style);  
 	}
 
 
