@@ -35,11 +35,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		private AudioSource source;
 
-		private AudioClip Ssound;
 		public AudioClip pistolSound;
 		public AudioClip smgSound;
 		public AudioClip sniperSound;
 		public AudioClip bazookaSound;
+
+		private AudioClip Ssound;
 
 		public void Awake()
 		{
@@ -95,6 +96,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                         _lookRotation = Quaternion.LookRotation(_direction);
                         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * RotationSpeed);
 
+						if (weapon == "pistol") {
+							Ssound = pistolSound;
+						}
+						else if (weapon == "smg") {
+							Ssound = smgSound;
+						}
+						else if (weapon == "sniper") {
+							Ssound = sniperSound;
+						}
+						else if (weapon == "bazooka") {
+							Ssound = bazookaSound;
+						}
+						//Debug.Log (Ssound);
+
                         //shoot on timer
                         if (shootTimer <= 0)
                             shoot();
@@ -119,14 +134,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 	    public void shoot() {
 		    Rigidbody clone;
+			//Ssound = pistolSound;
+			//Debug.Log (Ssound);
+			source.PlayOneShot (Ssound, 1.0f);
             clone = Instantiate(projectile, transform.position + transform.forward + Vector3.up, transform.rotation) as Rigidbody;
             clone.AddForce(clone.transform.forward * projectileSpeed);
             shootTimer = gunTimer;
             if (ammo-- <= 0) is_Berserk = true;
-			source.PlayOneShot (Ssound);
 	    }
     
-	    public void setWeapon(string weapon) 
+		public void setWeapon(string weapon) 
 		{
 			if (weapon == "pistol") {
 				ammo = 10;
@@ -163,6 +180,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				projectile = GameObject.Find ("bazookaBullet").GetComponent<Rigidbody>();
 				Ssound = bazookaSound;
 			}
+
+			//Debug.Log (Ssound);
 
 				//projectileSpeed 
 				//pstol= 1000;

@@ -12,9 +12,10 @@ GameObject:
   - 23: {fileID: 2321808}
   - 64: {fileID: 6490598}
   - 54: {fileID: 5476504}
+  - 135: {fileID: 13528772}
   m_Layer: 0
   m_Name: merbyPistolBullet
-  m_TagString: pistolBullet
+  m_TagString: merbyPistolBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,13 +92,33 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: b2d96acf13bc37b4698d2ce87b9c192b, type: 3}
+--- !u!135 &13528772
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07315491
+  m_Center: {x: 0, y: -9.313226e-10, z: 0.045657586}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: merbyPistolBullet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184612}
