@@ -193,7 +193,8 @@ ModelImporter:
     400184: transform4
     4300000: EnemyGeometry
     4300002: Bazooka
-    7400000: AnimAll
+    7400000: Idle
+    7400002: Run
     9500000: //RootNode
     13700000: Bazooka
     13700002: EnemyGeometry
@@ -217,7 +218,471 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: AnimAll
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bazooka
+        weight: 1
+      - path: BazookaGrip
+        weight: 1
+      - path: BazookaGrip/PistolTip
+        weight: 1
+      - path: EnemyGeometry
+        weight: 1
+      - path: ikHandle_l_arm
+        weight: 1
+      - path: ikHandle_l_hand
+        weight: 1
+      - path: ikHandle_l_Leg
+        weight: 1
+      - path: ikHandle_l_Leg/ikHandle_l_foot
+        weight: 1
+      - path: ikHandle_r_arm
+        weight: 1
+      - path: ikHandle_r_hand
+        weight: 1
+      - path: ikHandle_r_Leg
+        weight: 1
+      - path: ikHandle_r_Leg/ikHandle_r_foot
+        weight: 1
+      - path: ikHandle_upperBody
+        weight: 1
+      - path: ikHandle_upperBody/ikHandle_Head
+        weight: 1
+      - path: ikHandle_upperBody/ikHandle_upperSpine
+        weight: 1
+      - path: imagePlane1
+        weight: 1
+      - path: imagePlane2
+        weight: 1
+      - path: imagePlane3
+        weight: 1
+      - path: imagePlane4
+        weight: 1
+      - path: imagePlane5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform2
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform3
+        weight: 1
+      - path: pCube3
+        weight: 1
+      - path: pCube3/transform4
+        weight: 1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe1/transform1
+        weight: 1
+      - path: skin_hip_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01/skin_l_foot_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01/skin_l_foot_01/skin_l_toe_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01/skin_r_foot_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01/skin_r_foot_01/skin_r_toe_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01/skin_l_fingerj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01/skin_l_fingerj2_01/skin_l_fingerj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1/skin_l_fingerj2_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1/skin_l_fingerj2_01 1/skin_l_fingerj3_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2/skin_l_fingerj2_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2/skin_l_fingerj2_01 2/skin_l_fingerj3_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3/skin_l_fingerj2_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3/skin_l_fingerj2_01 3/skin_l_fingerj3_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01/skin_l_thumbj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01/skin_l_thumbj2_01/skin_l_thumbj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01/skin_r_fingerj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01/skin_r_fingerj2_01/skin_r_fingerj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1/skin_r_fingerj2_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1/skin_r_fingerj2_01 1/skin_r_fingerj3_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2/skin_r_fingerj2_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2/skin_r_fingerj2_01 2/skin_r_fingerj3_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3/skin_r_fingerj2_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3/skin_r_fingerj2_01 3/skin_r_fingerj3_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01/skin_r_thumbj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01/skin_r_thumbj2_01/skin_r_thumbj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01/skin_face_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01/skin_V6_headTop_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Run
+      takeName: AnimAll
+      firstFrame: 6
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bazooka
+        weight: 1
+      - path: BazookaGrip
+        weight: 1
+      - path: BazookaGrip/PistolTip
+        weight: 1
+      - path: EnemyGeometry
+        weight: 1
+      - path: ikHandle_l_arm
+        weight: 1
+      - path: ikHandle_l_hand
+        weight: 1
+      - path: ikHandle_l_Leg
+        weight: 1
+      - path: ikHandle_l_Leg/ikHandle_l_foot
+        weight: 1
+      - path: ikHandle_r_arm
+        weight: 1
+      - path: ikHandle_r_hand
+        weight: 1
+      - path: ikHandle_r_Leg
+        weight: 1
+      - path: ikHandle_r_Leg/ikHandle_r_foot
+        weight: 1
+      - path: ikHandle_upperBody
+        weight: 1
+      - path: ikHandle_upperBody/ikHandle_Head
+        weight: 1
+      - path: ikHandle_upperBody/ikHandle_upperSpine
+        weight: 1
+      - path: imagePlane1
+        weight: 1
+      - path: imagePlane2
+        weight: 1
+      - path: imagePlane3
+        weight: 1
+      - path: imagePlane4
+        weight: 1
+      - path: imagePlane5
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform2
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform3
+        weight: 1
+      - path: pCube3
+        weight: 1
+      - path: pCube3/transform4
+        weight: 1
+      - path: pPipe1
+        weight: 1
+      - path: pPipe1/transform1
+        weight: 1
+      - path: skin_hip_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01/skin_l_foot_01
+        weight: 1
+      - path: skin_hip_01/skin_l_thigh_01/skin_l_shin_01/skin_l_foot_01/skin_l_toe_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01/skin_r_foot_01
+        weight: 1
+      - path: skin_hip_01/skin_r_thigh_01/skin_r_shin_01/skin_r_foot_01/skin_r_toe_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01/skin_l_fingerj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_01/skin_l_fingerj1_01/skin_l_fingerj2_01/skin_l_fingerj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1/skin_l_fingerj2_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_02/skin_l_fingerj1_01
+          1/skin_l_fingerj2_01 1/skin_l_fingerj3_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2/skin_l_fingerj2_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_03/skin_l_fingerj1_01
+          2/skin_l_fingerj2_01 2/skin_l_fingerj3_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3/skin_l_fingerj2_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_fingerBase_04/skin_l_fingerj1_01
+          3/skin_l_fingerj2_01 3/skin_l_fingerj3_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01/skin_l_thumbj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_l_uppperArm_01/skin_l_forearm_01/skin_l_wrist/skin_l_hand_01/skin_l_thumbBase_01/skin_l_thumbj1_01/skin_l_thumbj2_01/skin_l_thumbj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01/skin_r_fingerj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_01/skin_r_fingerj1_01/skin_r_fingerj2_01/skin_r_fingerj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1/skin_r_fingerj2_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_02/skin_r_fingerj1_01
+          1/skin_r_fingerj2_01 1/skin_r_fingerj3_01 1
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2/skin_r_fingerj2_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_03/skin_r_fingerj1_01
+          2/skin_r_fingerj2_01 2/skin_r_fingerj3_01 2
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3/skin_r_fingerj2_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_fingerBase_04/skin_r_fingerj1_01
+          3/skin_r_fingerj2_01 3/skin_r_fingerj3_01 3
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01/skin_r_thumbj2_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_r_uppperArm_01/skin_r_forearm_01/skin_r_wrist/skin_r_hand_01/skin_r_thumbBase_01/skin_r_thumbj1_01/skin_r_thumbj2_01/skin_r_thumbj3_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01/skin_face_01
+        weight: 1
+      - path: skin_hip_01/skin_V1_01/skin_V2_01/skin_V3_shoulder_01/skin_V4_neck_01/skin_V5_headBase_01/skin_V6_headTop_01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
