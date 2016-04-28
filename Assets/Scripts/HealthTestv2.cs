@@ -46,21 +46,8 @@ public class HealthTestv2 : MonoBehaviour {
 
 	public float invincibleTimer = 2;
 
-	private AudioSource source;
-
-	public AudioClip pickupSound;
-
-
-
 	//box for health
-	Rect healthLabel = new Rect(Screen.width/21, Screen.height/15, Screen.width / 5, Screen.height / 5);
-	//Rect healthLabel = new Rect(0, 0, 120, 120);
-
-
-	public void Awake()
-	{
-		source = GetComponent<AudioSource>();
-	}
+	Rect healthLabel = new Rect(60,60,60,60);
 
 	public void barDamage()
 	{
@@ -123,11 +110,8 @@ public class HealthTestv2 : MonoBehaviour {
 	//creates the display for merby's health
 	public void OnGUI()
 	{
-		var style = new GUIStyle("label");
-		style.fontSize = 25;
-		GUI.contentColor = Color.magenta;
-		GUI.Label (healthLabel, "Health: " + currentHealth, style);  
-
+		GUI.contentColor = Color.black;
+		GUI.Label (healthLabel, "Health: " + currentHealth, "color");  
 	}
 
 
@@ -192,7 +176,6 @@ public class HealthTestv2 : MonoBehaviour {
 
 			GetComponent<Ammo> ().beserkPistolTrigger ();
 			abilityHit = true;
-			source.PlayOneShot (pickupSound, 0.5f);
 		}
 
 		if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("smgEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
@@ -205,7 +188,6 @@ public class HealthTestv2 : MonoBehaviour {
 
 			GetComponent<Ammo> ().beserkSMGTrigger ();
 			abilityHit = true;
-			source.PlayOneShot (pickupSound, 0.5f);
 		}
 
 		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("sniperEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
@@ -218,7 +200,6 @@ public class HealthTestv2 : MonoBehaviour {
 
 			GetComponent<Ammo> ().beserkSniperTrigger ();
 			abilityHit = true;
-			source.PlayOneShot (pickupSound, 0.5f);
 		}
 
 		else if (other.gameObject.GetComponent<EnemyAI> ().is_Berserk == true && other.gameObject.CompareTag ("bazookaEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
@@ -231,7 +212,6 @@ public class HealthTestv2 : MonoBehaviour {
 
 			GetComponent<Ammo> ().beserkBazookaTrigger ();
 			abilityHit = true;
-			source.PlayOneShot (pickupSound, 0.5f);
 		}
 
 
@@ -245,7 +225,6 @@ public class HealthTestv2 : MonoBehaviour {
 			barDamage ();
 
 			GetComponent<Ammo> ().pistolTrigger ();
-			source.PlayOneShot (pickupSound, 0.5f);
 
 		} 
 
@@ -258,7 +237,6 @@ public class HealthTestv2 : MonoBehaviour {
 			barDamage ();
 
 			GetComponent<Ammo> ().smgTrigger ();
-			source.PlayOneShot (pickupSound, 0.5f);
 		} 
 
 		else if (other.gameObject.CompareTag ("sniperEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
@@ -270,7 +248,6 @@ public class HealthTestv2 : MonoBehaviour {
 			barDamage ();
 
 			GetComponent<Ammo> ().sniperTrigger ();
-			source.PlayOneShot (pickupSound, 0.5f);
 		} 
 
 		else if (other.gameObject.CompareTag ("bazookaEnemy") && hasAbility == false && Input.GetKey (KeyCode.E)) 
@@ -282,7 +259,6 @@ public class HealthTestv2 : MonoBehaviour {
 			barDamage ();
 
 			GetComponent<Ammo> ().bazookaTrigger ();
-			source.PlayOneShot (pickupSound, 0.5f);
 		} 
 
 		else 

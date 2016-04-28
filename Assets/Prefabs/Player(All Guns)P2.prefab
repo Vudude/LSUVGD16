@@ -1616,7 +1616,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187184}
-  m_LocalRotation: {x: -0.14252205, y: 0.6925947, z: -0.6879364, w: 0.16353434}
+  m_LocalRotation: {x: -0.14252207, y: 0.69259477, z: -0.6879365, w: 0.16353436}
   m_LocalPosition: {x: -0.0072290986, y: -0.0075896396, z: 0.00004843475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2826,11 +2826,6 @@ MonoBehaviour:
   aimError: 0.00001
   defaultAimDistance: 80
   projectileSpeed: 500
-  source: {fileID: 0}
-  pistolSound: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
-  smgSound: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
-  bazookaSound: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
-  sniperSound: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
 --- !u!114 &11415884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2849,11 +2844,6 @@ MonoBehaviour:
   aimError: 0.00001
   defaultAimDistance: 1000
   projectileSpeed: 1000
-  source: {fileID: 0}
-  pistolSound: {fileID: 0}
-  smgSound: {fileID: 0}
-  bazookaSound: {fileID: 0}
-  sniperSound: {fileID: 0}
 --- !u!114 &11417360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2878,7 +2868,6 @@ MonoBehaviour:
   hasAbility: 0
   hasInvincibility: 0
   invincibleTimer: 2
-  pickupSound: {fileID: 8300000, guid: cb30f93908e60fb45b0a4e0fbf7b075e, type: 3}
 --- !u!114 &11418802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3186,26 +3175,6 @@ Prefab:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: smgSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 4dd56a8ad29ee1a4a80a57c891adfd24, type: 3}
-    - target: {fileID: 0}
-      propertyPath: pistolSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2d41d289380c5934c802c44bc4818dd1, type: 3}
-    - target: {fileID: 0}
-      propertyPath: bazookaSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
-    - target: {fileID: 0}
-      propertyPath: sniperSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 478a4f55e7c353c438287ba3ed008924, type: 3}
-    - target: {fileID: 0}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: cb30f93908e60fb45b0a4e0fbf7b075e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151460}
