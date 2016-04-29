@@ -13,11 +13,19 @@ public class PlayAgain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		playAgain ();
 	}
 
 	public void playAgain()
 	{ 
-		SceneManager.LoadScene("Scenes/tutorial2");
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+			Debug.Break();
+		}
+
+		if (Input.GetKey (KeyCode.W)) {
+			SceneManager.LoadScene ("Scenes/tutorial2");
+		}
 	}
 }
