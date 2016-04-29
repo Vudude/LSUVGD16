@@ -3646,6 +3646,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480282178}
   - 114: {fileID: 480282177}
+  - 82: {fileID: 480282179}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -3674,6 +3675,7 @@ MonoBehaviour:
   shootTimer: 2
   spawnTiming: 1
   projectileSpeed: 1500
+  bazookaSound: {fileID: 8300000, guid: 14a16c5fa20e47d40b9f3de59e6a0191, type: 3}
 --- !u!4 &480282178
 Transform:
   m_ObjectHideFlags: 0
@@ -3687,6 +3689,80 @@ Transform:
   - {fileID: 695241467}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!82 &480282179
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480282176}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &487286133
 Prefab:
   m_ObjectHideFlags: 0
@@ -7196,7 +7272,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 034172559819f470a96b1e557460b5d4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88b2598f57cbc4466b20f0e64bbb0857, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
