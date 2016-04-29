@@ -160,5 +160,9 @@ public class Ammo : MonoBehaviour
 		ammoCount = 0;
 		GetComponent<HealthTestv2> ().hasAbility = false;
 
+		GetComponent<HealthTestv2> ().hasBazookaAbility = false;
+		GetComponent<HealthTestv2> ().hasPistolAbility = false;
+		GetComponent<HealthTestv2> ().hasSMGAbility = false;
+		GetComponent<HealthTestv2> ().hasSniperAbility = false;
 	}
 }
