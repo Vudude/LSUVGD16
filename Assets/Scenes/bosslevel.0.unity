@@ -3673,7 +3673,7 @@ MonoBehaviour:
   rotationSpeed: 20
   shootTimer: 2
   spawnTiming: 1
-  projectileSpeed: 500
+  projectileSpeed: 1500
 --- !u!4 &480282178
 Transform:
   m_ObjectHideFlags: 0
