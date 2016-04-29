@@ -8,7 +8,7 @@ public class Ammo : MonoBehaviour
 
 	public int ammoCount = 0;
 	//Rect ammoLabel = new Rect(120,160,160,160);
-	Rect ammoLabel = new Rect(Screen.width/21, Screen.height/9, Screen.width / 5, Screen.height / 5);
+	Rect ammoLabel = new Rect(Screen.width/21, Screen.height/9, Screen.width, Screen.height);
 	public Rigidbody projectile;
 	public GameObject pistol;
 	public GameObject sniper;
@@ -28,6 +28,7 @@ public class Ammo : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		ammoLabel = new Rect(Screen.width/21, Screen.height/9, Screen.width, Screen.height);
 		//Debug.Log ("I hate myself" + ammoCount);
 		if (ammoCount == 0) 
 		{

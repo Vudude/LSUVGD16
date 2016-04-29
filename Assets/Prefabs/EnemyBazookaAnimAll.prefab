@@ -2777,6 +2777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 100
+  enemyDamageSound: {fileID: 8300000, guid: 5ae931b4dedef4fc8ba2561290afe88c, type: 3}
 --- !u!136 &13672610
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2985,6 +2986,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 30a65be58ee524b7e9533e6b12406fe5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: enemyDamageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ae931b4dedef4fc8ba2561290afe88c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 110824}
