@@ -50,10 +50,12 @@ public class HealthTestv2 : MonoBehaviour {
 
 	public AudioClip pickupSound;
 
+	public AudioClip damageSound;
+
 
 
 	//box for health
-	Rect healthLabel = new Rect(Screen.width/21, Screen.height/15, Screen.width / 5, Screen.height / 5);
+	Rect healthLabel = new Rect(Screen.width/21, Screen.height/15, Screen.width, Screen.height);
 	//Rect healthLabel = new Rect(0, 0, 120, 120);
 
 
@@ -89,6 +91,8 @@ public class HealthTestv2 : MonoBehaviour {
 	//displays updated version of current health
 	public void takeDamage(int damage)
 	{
+		source.PlayOneShot (damageSound, 0.5f);
+
 		if (hasInvincibility == false) 
 		{
 			hasInvincibility = true;
@@ -141,6 +145,9 @@ public class HealthTestv2 : MonoBehaviour {
 
 	void Update()
 	{
+
+		healthLabel = new Rect(Screen.width/21, Screen.height/15, Screen.width, Screen.height);
+
 		if (invincibleTimer > 0)
 			invincibleTimer = invincibleTimer - Time.deltaTime;
 		else

@@ -9,9 +9,19 @@ public class EnemyHealth : MonoBehaviour {
 
     private bool beingEaten = false;
 
+	private AudioSource source;
+
+	public AudioClip enemyDamageSound;
+
 	// initializes the starting enemy health to be a 100
 	void Start () 
 	{
+		
+	}
+
+	public void Awake()
+	{
+		source = GetComponent<AudioSource>();
 	}
 
 	//function that calculates an enemies' new health. Takes an integer that represents merby's damage
@@ -66,5 +76,7 @@ public class EnemyHealth : MonoBehaviour {
 		currentHealth = currentHealth - damage;
 			if (currentHealth <= 0)
 			gameObject.SetActive (false);
+		source.PlayOneShot (enemyDamageSound, 1.3f);
+		Debug.Log ("Played the enemy sound");
 	}
 }

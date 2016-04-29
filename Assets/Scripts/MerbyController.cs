@@ -49,20 +49,20 @@ public class MerbyController : MonoBehaviour {
 
         Vector3 movement = Vector3.zero;
 
-		if (Input.GetKey(KeyCode.M))
+		if (Input.GetKey(KeyCode.H))
 		{
 			SceneManager.LoadScene ("Scenes/tutorial2");
 		}
-		if (Input.GetKey(KeyCode.K))
+		if (Input.GetKey(KeyCode.J))
 		{
 			SceneManager.LoadScene ("Scenes/Level1.0");
 		}
 
-		if (Input.GetKey(KeyCode.L))
+		if (Input.GetKey(KeyCode.K))
 		{
 			SceneManager.LoadScene ("Scenes/level2.1");
 		}
-		if (Input.GetKey(KeyCode.Slash))
+		if (Input.GetKey(KeyCode.L))
 		{
 			SceneManager.LoadScene ("Scenes/level3");
 		}

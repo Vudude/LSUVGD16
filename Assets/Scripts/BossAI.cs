@@ -22,9 +22,14 @@ public class BossAI : MonoBehaviour {
     public float spawnTiming;
     public float projectileSpeed = 500;
 
+	public AudioClip bazookaSound;
+
+	private AudioSource source;
+
 	// Use this for initialization
 	void Start () {
 
+		source = GetComponent<AudioSource>();
 		shootTimer = gunTimer;
         spawnTiming = spawnTimer;
         spawnPoints = GameObject.FindGameObjectsWithTag("spawnPoint");
@@ -59,6 +64,7 @@ public class BossAI : MonoBehaviour {
 	}
 
 	private void Shoot() {
+		source.PlayOneShot (bazookaSound);
 		Rigidbody clone;
             	clone = Instantiate(projectile, transform.position + transform.forward * 5 + Vector3.up , transform.rotation) as Rigidbody;
             	clone.AddForce(clone.transform.forward * projectileSpeed);

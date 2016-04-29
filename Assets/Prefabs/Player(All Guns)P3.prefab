@@ -2031,8 +2031,9 @@ MonoBehaviour:
   hasSniperAbility: 0
   hasAbility: 0
   hasInvincibility: 0
-  invincibleTimer: 2
+  invincibleTimer: 1
   pickupSound: {fileID: 8300000, guid: cb30f93908e60fb45b0a4e0fbf7b075e, type: 3}
+  damageSound: {fileID: 8300000, guid: 54fc67da5f0c340d399b044eed08dc31, type: 3}
 --- !u!114 &11424394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2381,6 +2382,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: abilityHealth
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 54fc67da5f0c340d399b044eed08dc31, type: 3}
+    - target: {fileID: 0}
+      propertyPath: invincibleTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
